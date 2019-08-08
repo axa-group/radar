@@ -72,14 +72,13 @@ steps:
       version: 2.2.105
 
   - task: DotNetCoreCLI@2
-    displayName: Build
+    displayName: 'dotnet build'
     inputs:
-      command: build
-      projects: "$(Parameters.RestoreBuildProjects)"
-      arguments: "Radar.sln --configuration $(BuildConfiguration)"
+      projects: '**/*.csproj'
+      arguments: '--configuration $(BuildConfiguration)"'
 
   #- task: DotNetCoreCLI@2
-  #  displayName: Test
+  #  displayName: 'dotnet test'
   #  inputs:
   #    command: test
   #    projects: "$(Parameters.TestProjects)"
