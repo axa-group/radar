@@ -25,21 +25,19 @@ steps:
       casing: false
       pad: false
 
-  #- task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
-  #  displayName: "Prepare analysis on SonarCloud"
-  #  inputs:
-  #    SonarCloud: SonarCloud
-  #    organization: axaguildev
-  #    scannerMode: CLI
-  #    configMode: manual
-  #    cliProjectKey: "AxaGuilDEv_radar"
-  #    cliProjectName: "radar"
-  #    extraProperties: |
-  #      sonar.branch.name=$(SmartBranchName)
-  #      sonar.exclusions=**/*.spec.ts,**/*.spec.tsx,**/*.stories.tsx,**/coverage/**,Scripts/**,**/*.scss,**/__snapshots__/**,**/*[Tt]ests.cs,**/node_modules/**,**/ClientApp/build/**,**/ClientApp/.storybook/**,**/obj/**,**/__mocks__/**,**/ClientApp/src/serviceWorker.ts
-  #      sonar.typescript.lcov.reportPaths=ClientApp/coverage/lcov.info
-  #      sonar.cs.opencover.reportsPaths=**/opencover.xml
-  #  condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
+  - task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
+    displayName: 'Prepare analysis on SonarCloud'
+    inputs:
+      SonarCloud: 'axa-group.radar'
+      organization: 'axa-group'
+      projectKey: 'axa-group_radar'
+      projectName: radar
+      extraProperties: |
+       sonar.branch.name=$(SmartBranchName)
+       sonar.exclusions=**/*.spec.ts,**/*.spec.tsx,**/*.stories.tsx,**/coverage/**,Scripts/**,**/*.scss,**/__snapshots__/**,**/*[Tt]ests.cs,**/node_modules/**,**/ClientApp/build/**,**/ClientApp/.storybook/**,**/obj/**,**/__mocks__/**,**/ClientApp/src/serviceWorker.ts
+       sonar.typescript.lcov.reportPaths=ClientApp/coverage/lcov.info
+       sonar.cs.opencover.reportsPaths=**/opencover.xml
+      condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: Npm@1
     displayName: "npm install"
@@ -73,27 +71,27 @@ steps:
     inputs:
       version: 2.2.105
 
-  - task: DotNetCoreCLI@2
-    displayName: Build
-    inputs:
-      command: build
-      projects: "$(Parameters.RestoreBuildProjects)"
-      arguments: "Radar.sln --configuration $(BuildConfiguration)"
+  #- task: DotNetCoreCLI@2
+  #  displayName: Build
+  #  inputs:
+  #    command: build
+  #    projects: "$(Parameters.RestoreBuildProjects)"
+  #    arguments: "Radar.sln --configuration $(BuildConfiguration)"
 
-  - task: DotNetCoreCLI@2
-    displayName: Test
-    inputs:
-      command: test
-      projects: "$(Parameters.TestProjects)"
-      arguments: "Radar.sln --configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml"
+  #- task: DotNetCoreCLI@2
+  #  displayName: Test
+  #  inputs:
+  #    command: test
+  #    projects: "$(Parameters.TestProjects)"
+  #    arguments: "Radar.sln --configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml"
 
-  #- task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
-  #  displayName: "Run Code Analysis"
-  #  condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
+  - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+    displayName: "Run Code Analysis"
+    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
 
-  #- task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
-  #  displayName: "Publish Quality Gate Result"
-  #  condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
+  - task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
+    displayName: "Publish Quality Gate Result"
+    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: DotNetCoreCLI@2
     displayName: Publish
