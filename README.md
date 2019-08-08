@@ -1,8 +1,7 @@
 # @axa-fr/radar
 
 [![Build status](https://dev.azure.com/axaguildev/radar/_apis/build/status/AxaGuilDEv.radar?branch=master)](https://dev.azure.com/axaguildev/radar)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=axa-group_radar) [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=reliability_rating) [![Security](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=security_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=security_rating) [![Code Corevage](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=coverage)]
-[![Twitter](https://img.shields.io/twitter/follow/GuildDEvOpen?style=social)](https://twitter.com/intent/follow?screen_name=GuildDEvOpen)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=axa-group_radar) [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=reliability_rating) [![Security](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=security_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=security_rating) [![Code Corevage](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=coverage)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=Coverage) [![Twitter](https://img.shields.io/twitter/follow/GuildDEvOpen?style=social)](https://twitter.com/intent/follow?screen_name=GuildDEvOpen)
 
 <p align="center">
     <img src="./docs/img/introduction.gif"
@@ -98,13 +97,13 @@ You can add a reference entity by adding its id in the src/RadarTechno/appsettin
 
 Entity technologies are displayed on the radar following a certain color code depending on the difference of statuses between the entity and the reference entity :
 
-| Status | Entity Assess | Entity Reinforce | Entity Excel | Entity Deprecated |
-|------------|--------|-----------|--------|------------|
-| **No Reference Status** | Green | Green | Green | Grey |
-| **Reference Assess** | Green | Orange | Orange | Grey |
-| **Reference Reinforce** | Green | Green | Green | Grey |
-| **Reference Excel** | Green | Green | Green | Grey |
-| **Reference Deprecated** | Red | Red | Red | Grey |
+| Status                   | Entity Assess | Entity Reinforce | Entity Excel | Entity Deprecated |
+| ------------------------ | ------------- | ---------------- | ------------ | ----------------- |
+| **No Reference Status**  | Green         | Green            | Green        | Grey              |
+| **Reference Assess**     | Green         | Orange           | Orange       | Grey              |
+| **Reference Reinforce**  | Green         | Green            | Green        | Grey              |
+| **Reference Excel**      | Green         | Green            | Green        | Grey              |
+| **Reference Deprecated** | Red           | Red              | Red          | Grey              |
 
 ### Workflow
 
