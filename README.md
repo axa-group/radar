@@ -96,6 +96,7 @@ The reference entity is the entity deciding the recommended status of technologi
 You can add a reference entity by adding its id in the src/RadarTechno/appsettings.json and src/RadarTechno/appsettings.development.json.
 
 Entity technologies are displayed on the radar following a certain color code depending on the difference of statuses between the entity and the reference entity :
+
 | Status | Entity Assess | Entity Reinforce | Entity Excel | Entity Deprecated |
 |------------|--------|-----------|--------|------------|
 | **No Reference Status** | Green | Green | Green | Grey |
