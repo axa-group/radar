@@ -6,6 +6,6 @@ update_configs:
     directory: "/src/RadarTechno/ClientApp"
     update_schedule: "live"
   # Keep Dockerfile up to date, batching pull requests weekly
-  - package_manager: "dotnet"
+  - package_manager: "dotnet:nuget"
     directory: "/src"
     update_schedule: "weekly"
