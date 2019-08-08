@@ -45,12 +45,12 @@ steps:
       workingDir: src/RadarTechno/ClientApp
       verbose: false
 
-  #- task: Npm@0
-  #  displayName: "npm test"
-  #  inputs:
-  #    cwd: src/RadarTechno/ClientApp
-  #    command: test
-  #    arguments: "-- --coverage --runInBand"
+  - task: Npm@0
+    displayName: "npm test"
+    inputs:
+      cwd: src/RadarTechno/ClientApp
+      command: test
+      arguments: "-- --coverage --runInBand"
 
   - task: Npm@0
     displayName: "npm ts"
