@@ -1,6 +1,7 @@
 # @axa-fr/radar
 
 [![Build status](https://dev.azure.com/axaguildev/radar/_apis/build/status/AxaGuilDEv.radar?branch=master)](https://dev.azure.com/axaguildev/radar)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=axa-group_radar) [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=reliability_rating) [![Security](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=security_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=security_rating) [![Code Corevage](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=coverage)]
 [![Twitter](https://img.shields.io/twitter/follow/GuildDEvOpen?style=social)](https://twitter.com/intent/follow?screen_name=GuildDEvOpen)
 
 <p align="center">
