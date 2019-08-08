@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots SideModal History modal 1`] = `
+Array [
+  <div
+    className="af-modal af-modal--opened"
+  >
+    <div
+      className="af-modal__header"
+    >
+      <h2
+        className="af-modal__header-title"
+      >
+        title
+      </h2>
+      <button
+        aria-label="Close"
+        className="af-modal__header-close-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          className="glyphicon glyphicon-close"
+        />
+      </button>
+    </div>
+    <div
+      className="af-modal__body"
+    >
+      <div
+        className={null}
+        style={
+          Object {
+            "minHeight": "94px",
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="af-accordion__item af-accordion__item--radar"
+        >
+          <div
+            className="af-accordion__item-header af-accordion__item-header--radar"
+            id="5ccaec7275dbbc092cb9029b"
+            role="tab"
+          >
+            <h3
+              className="af-accordion__item-title"
+              role="intera"
+            >
+              <span
+                className="glyphicon glyphicon-menu-down"
+              />
+              <a
+                aria-controls="5ccaec7275dbbc092cb9029bbody"
+                aria-expanded="true"
+                className="af-accordion__item-toggle"
+                data-toggle="collapse"
+                href="#5ccaec7275dbbc092cb9029bbody"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                02 May 2019 03:11:14
+              </a>
+            </h3>
+          </div>
+          <div
+            aria-labelledby="5ccaec7275dbbc092cb9029b"
+            className="af-accordion__collapse af-accordion__collapse--close af-accordion__collapse--radar"
+            id="5ccaec7275dbbc092cb9029bbody"
+            role="tabpanel"
+          >
+            <div
+              className="af-accordion__block"
+            >
+              <div
+                className="container af-restitution"
+              >
+                <div
+                  className="af-restitution__content"
+                >
+                  <div
+                    className="row af-restitution__listdef"
+                  >
+                    <div
+                      className="col-md-6 af-restitution__listdef-item"
+                    >
+                      <span
+                        className="radar-restitution__text"
+                      >
+                        Type
+                      </span>
+                    </div>
+                    <div
+                      className="col-md-6 af-restitution__listdef-value"
+                    >
+                      technology
+                    </div>
+                  </div>
+                  <div
+                    className="row af-restitution__listdef"
+                  >
+                    <div
+                      className="col-md-6 af-restitution__listdef-item"
+                    >
+                      <span
+                        className="radar-restitution__text"
+                      >
+                        Author
+                      </span>
+                    </div>
+                    <div
+                      className="col-md-6 af-restitution__listdef-value"
+                    >
+                      Test@axa.fr
+                    </div>
+                  </div>
+                  <div
+                    className="row af-restitution__listdef"
+                  >
+                    <div
+                      className="col-md-12 af-restitution__listdef-item radar-restitution__differences"
+                    >
+                      <span
+                        className="radar-restitution__text"
+                      >
+                        Differences
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        
+      </div>
+    </div>
+  </div>,
+  <div
+    className="af-modal__overlay"
+    onClick={[Function]}
+  />,
+]
+`;

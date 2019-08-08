@@ -1,0 +1,19 @@
+.radar-btn__home {
+  text-transform: uppercase;
+}
+
+.radar-notfound__container {
+  min-height: 250px;
+}
+
+.af-btn--radar {
+  color: #ffffff;
+  background: #3032c1;
+  border: 2px solid #3032c1;
+  box-shadow: none;
+  &:hover {
+    background: #ffffff;
+    box-shadow: none;
+    color: #3032c1;
+  }
+}

@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Entities View entity modal 1`] = `
+Array [
+  <div
+    className="af-modal af-modal--opened"
+  >
+    <div
+      className="af-modal__header"
+    >
+      <h2
+        className="af-modal__header-title"
+      >
+        AXA France
+      </h2>
+      <button
+        aria-label="Close"
+        className="af-modal__header-close-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          className="glyphicon glyphicon-close"
+        />
+      </button>
+    </div>
+    <div
+      className="af-modal__body"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="af-restitution col-md-6"
+        >
+          <section
+            className="af-restitution__content"
+          >
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Name
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                AXA France
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Worklow url
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value radar-restitution__links"
+              >
+                <a
+                  rel="noopener"
+                  target="_blank"
+                />
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Admin list
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                <ul
+                  className="af-restitution__listul"
+                >
+                  <li
+                    className="af-restitution__listul-item"
+                  >
+                    Test@axa.fr
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Number of Technologies
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                2
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <div
+            className="radar-restitution__table"
+          >
+            <div
+              className={null}
+              style={
+                Object {
+                  "minHeight": "94px",
+                  "position": "relative",
+                }
+              }
+            >
+              <table
+                className="af-table"
+              >
+                <thead
+                  className="af-table-thead"
+                >
+                  <tr
+                    className="af-table__tr"
+                  >
+                    <th
+                      className="af-table__th"
+                      colSpan={null}
+                      rowSpan={null}
+                    >
+                      Technology
+                    </th>
+                    <th
+                      className="af-table__th"
+                      colSpan={null}
+                      rowSpan={null}
+                    >
+                      Status
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  className="af-table__body"
+                >
+                  <tr
+                    className="af-table__tr"
+                  >
+                    <td
+                      className="af-table__cell"
+                      colSpan={null}
+                      rowSpan={null}
+                    >
+                      Solution de parametrage
+                    </td>
+                    <td
+                      className="af-table__cell"
+                      colSpan={null}
+                      rowSpan={null}
+                    >
+                      Candidate
+                    </td>
+                  </tr>
+                  <tr
+                    className="af-table__tr"
+                  >
+                    <td
+                      className="af-table__cell"
+                      colSpan={null}
+                      rowSpan={null}
+                    >
+                      Angular 2
+                    </td>
+                    <td
+                      className="af-table__cell"
+                      colSpan={null}
+                      rowSpan={null}
+                    >
+                      Deprecated
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+               
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="af-modal__overlay"
+    onClick={[Function]}
+  />,
+]
+`;

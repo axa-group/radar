@@ -1,0 +1,883 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Radar Technology radar view 1`] = `
+<div
+  className="af-home container"
+>
+  <div
+    className={null}
+    style={
+      Object {
+        "minHeight": "94px",
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      className="af-tabs"
+    >
+      <ul
+        className="af-tabs__control"
+      >
+        <li
+          className="af-tabs__item af-tabs__item--radar af-tabs__item--active"
+        >
+          <button
+            className="af-tabs__link"
+            id="0"
+            onClick={[Function]}
+          >
+            Languages and Frameworks
+          </button>
+        </li>
+        <li
+          className="af-tabs__item af-tabs__item--radar"
+        >
+          <button
+            className="af-tabs__link"
+            id="1"
+            onClick={[Function]}
+          >
+            Patterns
+          </button>
+        </li>
+        <li
+          className="af-tabs__item af-tabs__item--radar"
+        >
+          <button
+            className="af-tabs__link"
+            id="2"
+            onClick={[Function]}
+          >
+            Platforms
+          </button>
+        </li>
+        <li
+          className="af-tabs__item af-tabs__item--radar"
+        >
+          <button
+            className="af-tabs__link"
+            id="3"
+            onClick={[Function]}
+          >
+            Tools
+          </button>
+        </li>
+        <li
+          className="af-tabs__item af-tabs__item--radar"
+        >
+          <button
+            className="af-tabs__link"
+            id="4"
+            onClick={[Function]}
+          >
+            Infrastructures
+          </button>
+        </li>
+        <li
+          className="af-tabs__item af-tabs__item--radar"
+        >
+          <button
+            className="af-tabs__link"
+            id="5"
+            onClick={[Function]}
+          >
+            Practices
+          </button>
+        </li>
+      </ul>
+      <div
+        className="af-tabs__content"
+      >
+        <div
+          className="af-tabs__pane"
+        >
+          <div
+            className="container-fluid"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-md-4"
+              >
+                <div>
+                  <div
+                    className="rt-radar__status"
+                  >
+                    <h2
+                      className="rt-radar__status-title"
+                    >
+                      Excel
+                    </h2>
+                    <div
+                      className="rt-radar__status-help"
+                    >
+                      <div
+                        className="af-popover__container-over"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="btn af-btn--circle"
+                          type="button"
+                        >
+                          <span
+                            className="af-more-help"
+                          >
+                            i
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul />
+                </div>
+                <div>
+                  <div
+                    className="rt-radar__status"
+                  >
+                    <h2
+                      className="rt-radar__status-title"
+                    >
+                      Reinforce
+                    </h2>
+                    <div
+                      className="rt-radar__status-help"
+                    >
+                      <div
+                        className="af-popover__container-over"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="btn af-btn--circle"
+                          type="button"
+                        >
+                          <span
+                            className="af-more-help"
+                          >
+                            i
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul />
+                </div>
+                <div>
+                  <div
+                    className="rt-radar__status"
+                  >
+                    <h2
+                      className="rt-radar__status-title"
+                    >
+                      Assess
+                    </h2>
+                    <div
+                      className="rt-radar__status-help"
+                    >
+                      <div
+                        className="af-popover__container-over"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="btn af-btn--circle"
+                          type="button"
+                        >
+                          <span
+                            className="af-more-help"
+                          >
+                            i
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul />
+                </div>
+                <div>
+                  <div
+                    className="rt-radar__status"
+                  >
+                    <h2
+                      className="rt-radar__status-title"
+                    >
+                      Deprecated
+                    </h2>
+                    <div
+                      className="rt-radar__status-help"
+                    >
+                      <div
+                        className="af-popover__container-over"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="btn af-btn--circle"
+                          type="button"
+                        >
+                          <span
+                            className="af-more-help"
+                          >
+                            i
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul>
+                    <li
+                      className="rt-radar__technology"
+                      onClick={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <span
+                        className="rt-radar__technology-name"
+                      >
+                        Angular 2
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    className="rt-radar__status"
+                  >
+                    <h2
+                      className="rt-radar__status-title"
+                    >
+                      Out
+                    </h2>
+                    <div
+                      className="rt-radar__status-help"
+                    >
+                      <div
+                        className="af-popover__container-over"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="btn af-btn--circle"
+                          type="button"
+                        >
+                          <span
+                            className="af-more-help"
+                          >
+                            i
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul />
+                </div>
+                <div>
+                  <div
+                    className="rt-radar__status"
+                  >
+                    <h2
+                      className="rt-radar__status-title"
+                    >
+                      Candidate
+                    </h2>
+                    <div
+                      className="rt-radar__status-help"
+                    >
+                      <div
+                        className="af-popover__container-over"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="btn af-btn--circle"
+                          type="button"
+                        >
+                          <span
+                            className="af-more-help"
+                          >
+                            i
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <ul />
+                </div>
+              </div>
+              <div
+                className="col-md-6 offset-md-2 rt-radar__container"
+              >
+                <div
+                  className="radar__container "
+                  style={
+                    Object {
+                      "maxWidth": "100%",
+                      "width": 600,
+                    }
+                  }
+                >
+                  <div
+                    className="radar  "
+                    style={
+                      Object {
+                        "height": "600px",
+                        "width": "600px",
+                      }
+                    }
+                  >
+                    <div
+                      className="radar__inner-radar radar__inner-radar--1 
+            null"
+                      style={
+                        Object {
+                          "backgroundColor": "#777",
+                          "height": 600,
+                          "width": 600,
+                        }
+                      }
+                    >
+                      <div
+                        className="radar-technology__container"
+                        style={
+                          Object {
+                            "bottom": "397.4950262812949px",
+                            "right": "397.49502628129494px",
+                          }
+                        }
+                      >
+                        <span
+                          className="radar-technology__name "
+                        >
+                          Angular 2
+                        </span>
+                        <div
+                          className="radar-technology "
+                          id="5823926b69170e15d895fda2"
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                        >
+                          <div
+                            className="radar-technology__tooltip radar-technology__tooltip--deprecated"
+                          >
+                            <span
+                              className="radar-technology__tooltiptext"
+                            >
+                              Angular 2
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="radar__inner-radar radar__inner-radar--2 
+          null"
+                      style={
+                        Object {
+                          "height": 524.2857142857142,
+                          "width": 524.2857142857142,
+                        }
+                      }
+                    />
+                    <div
+                      className="radar__inner-radar radar__inner-radar--3 
+            null"
+                      style={
+                        Object {
+                          "backgroundColor": "#ef9a9a",
+                          "height": 514.2857142857142,
+                          "width": 514.2857142857142,
+                        }
+                      }
+                    />
+                    <div
+                      className="radar__inner-radar radar__inner-radar--4
+            null"
+                      style={
+                        Object {
+                          "backgroundColor": "#ef5350",
+                          "height": 400,
+                          "width": 400,
+                        }
+                      }
+                    />
+                    <div
+                      className="radar__inner-radar radar__inner-radar--5
+            null"
+                      style={
+                        Object {
+                          "backgroundColor": "#d32f2f",
+                          "height": 240,
+                          "width": 240,
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="radar__legend--container"
+                    style={
+                      Object {
+                        "width": 600,
+                      }
+                    }
+                  >
+                    <div
+                      className="radar__legend radar__legend--deprecated"
+                      style={
+                        Object {
+                          "backgroundColor": "#777",
+                          "width": 75.71428571428578,
+                        }
+                      }
+                    >
+                      Deprecated
+                    </div>
+                    <div
+                      className="radar__legend"
+                      style={
+                        Object {
+                          "width": "10px",
+                        }
+                      }
+                    />
+                    <div
+                      className="radar__legend radar__legend--assess"
+                      style={
+                        Object {
+                          "backgroundColor": "#ef9a9a",
+                          "width": 114.28571428571422,
+                        }
+                      }
+                    >
+                      Assess
+                    </div>
+                    <div
+                      className="radar__legend radar__legend--reinforce"
+                      style={
+                        Object {
+                          "backgroundColor": "#ef5350",
+                          "width": 160,
+                        }
+                      }
+                    >
+                      Reinforce
+                    </div>
+                    <div
+                      className="radar__legend radar__legend--excel"
+                      style={
+                        Object {
+                          "backgroundColor": "#d32f2f",
+                          "width": 240,
+                        }
+                      }
+                    >
+                      Excel
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="af-modal af-modal--closed"
+    >
+      <div
+        className="af-modal__header"
+      >
+        <h2
+          className="af-modal__header-title"
+        >
+          Solution de parametrage
+        </h2>
+        <button
+          aria-label="Close"
+          className="af-modal__header-close-btn"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            aria-hidden="true"
+            className="glyphicon glyphicon-close"
+          />
+        </button>
+      </div>
+      <div
+        className="af-modal__body"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="af-restitution col-md-6"
+          >
+            <section
+              className="af-restitution__content"
+            >
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Status
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  Candidate
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Category
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  practices
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Description
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  testbfdbdfbdfb
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Scope
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  fezezf
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Reporter
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Useful links
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  <ul
+                    className="af-list radar-restitution__links"
+                  >
+                    <li>
+                      <a
+                        href="egr"
+                        rel="noopener"
+                        target="_blank"
+                      >
+                        rat
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Last updated on
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  2019-03-01T14:21:38.374Z
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Version
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  0
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Status
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  Candidate
+                </div>
+              </div>
+              <div
+                className="row af-restitution__listdef"
+              >
+                <div
+                  className="col-md-6 af-restitution__listdef-item"
+                >
+                  <span
+                    className="radar-restitution__text"
+                  >
+                    Recommended status
+                  </span>
+                </div>
+                <div
+                  className="col-md-6 af-restitution__listdef-value"
+                >
+                  Reinforce
+                </div>
+              </div>
+            </section>
+          </div>
+          <div
+            className="col-md-6"
+          >
+            <div
+              className="radar__container radar-sticky"
+              style={
+                Object {
+                  "maxWidth": "100%",
+                  "width": 400,
+                }
+              }
+            >
+              <div
+                className="radar  radar--force-display"
+                style={
+                  Object {
+                    "height": "400px",
+                    "width": "400px",
+                  }
+                }
+              >
+                <div
+                  className="radar__inner-radar radar__inner-radar--1 
+            null"
+                  style={
+                    Object {
+                      "backgroundColor": "#777",
+                      "height": 400,
+                      "width": 400,
+                    }
+                  }
+                />
+                <div
+                  className="radar__inner-radar radar__inner-radar--2 
+          null"
+                  style={
+                    Object {
+                      "height": 352.85714285714283,
+                      "width": 352.85714285714283,
+                    }
+                  }
+                />
+                <div
+                  className="radar__inner-radar radar__inner-radar--3 
+            null"
+                  style={
+                    Object {
+                      "backgroundColor": "#cfd8dc",
+                      "height": 342.85714285714283,
+                      "width": 342.85714285714283,
+                    }
+                  }
+                />
+                <div
+                  className="radar__inner-radar radar__inner-radar--4
+            null"
+                  style={
+                    Object {
+                      "backgroundColor": "#b0bec5",
+                      "height": 266.66666666666663,
+                      "width": 266.66666666666663,
+                    }
+                  }
+                >
+                  <div
+                    className="radar-group-status"
+                  >
+                    <img
+                      alt="AXA"
+                      className="af-logo__brand"
+                      src="axa_logo_solid_mono_black_rgb.svg"
+                      style={
+                        Object {
+                          "maxHeight": 20,
+                          "maxWidth": 20,
+                        }
+                      }
+                    />
+                  </div>
+                </div>
+                <div
+                  className="radar__inner-radar radar__inner-radar--5
+            null"
+                  style={
+                    Object {
+                      "backgroundColor": "#90a4ae",
+                      "height": 160,
+                      "width": 160,
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="radar__legend--container"
+                style={
+                  Object {
+                    "width": 400,
+                  }
+                }
+              >
+                <div
+                  className="radar__legend radar__legend--deprecated"
+                  style={
+                    Object {
+                      "backgroundColor": "#777",
+                      "width": 47.14285714285717,
+                    }
+                  }
+                >
+                  Deprecated
+                </div>
+                <div
+                  className="radar__legend"
+                  style={
+                    Object {
+                      "width": "10px",
+                    }
+                  }
+                />
+                <div
+                  className="radar__legend radar__legend--assess"
+                  style={
+                    Object {
+                      "backgroundColor": "#cfd8dc",
+                      "width": 76.1904761904762,
+                    }
+                  }
+                >
+                  Assess
+                </div>
+                <div
+                  className="radar__legend radar__legend--reinforce"
+                  style={
+                    Object {
+                      "backgroundColor": "#b0bec5",
+                      "width": 106.66666666666663,
+                    }
+                  }
+                >
+                  Reinforce
+                </div>
+                <div
+                  className="radar__legend radar__legend--excel"
+                  style={
+                    Object {
+                      "backgroundColor": "#90a4ae",
+                      "width": 160,
+                    }
+                  }
+                >
+                  Excel
+                </div>
+              </div>
+              <div
+                className="radar__group-status-legend"
+              >
+                <img
+                  alt="AXA"
+                  className="radar__group-status-legend--image"
+                  src="axa_logo_solid_mono_black_rgb.svg"
+                />
+                <span>
+                  AXA Group Status recommendation
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+    
+  </div>
+</div>
+`;

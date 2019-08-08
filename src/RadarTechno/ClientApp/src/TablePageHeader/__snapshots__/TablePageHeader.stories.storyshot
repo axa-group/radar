@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DataTable Data table page header 1`] = `
+<div
+  className="radar-table__header"
+>
+  <h2
+    className="af-subtitle radar-table__title"
+  >
+    title
+  </h2>
+  <div
+    className="af-link--group"
+  >
+    <a
+      className="af-link af-link--hasIconLeft"
+      href="/path"
+      onClick={[Function]}
+    >
+      <i
+        className="glyphicon glyphicon-plus"
+      />
+      <span
+        className="af-link__text"
+      >
+        link
+      </span>
+    </a>
+    <a
+      className="af-link af-link--hasIconLeft"
+      download="file.csv"
+    >
+      <i
+        className="glyphicon glyphicon-save-alt"
+      />
+      <span
+        className="af-link__text"
+      >
+        Export
+      </span>
+    </a>
+  </div>
+</div>
+`;

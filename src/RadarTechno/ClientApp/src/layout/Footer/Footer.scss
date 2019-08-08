@@ -1,0 +1,9 @@
+@import '@axa-fr/react-toolkit-layout-footer/dist/footer.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Logo/logo.scss';
+
+.af-footer {
+  margin-top: 1rem;
+  &-content {
+    color: inherit;
+  }
+}

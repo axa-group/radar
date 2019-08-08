@@ -1,0 +1,751 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots SideModal Edit item modal 1`] = `
+Array [
+  <div
+    className="af-modal af-modal--opened"
+  >
+    <div
+      className="af-modal__header"
+    >
+      <h2
+        className="af-modal__header-title"
+      >
+        title
+      </h2>
+      <button
+        aria-label="Close"
+        className="af-modal__header-close-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          className="glyphicon glyphicon-close"
+        />
+      </button>
+    </div>
+    <div
+      className="af-modal__body"
+    >
+      <div>
+        <div
+          className="af-form radar-form"
+        >
+          <form
+            name="myform"
+          >
+            <article
+              className="af-panel af-radar-panel"
+            >
+              <div
+                className={null}
+                style={
+                  Object {
+                    "minHeight": "94px",
+                    "position": "relative",
+                  }
+                }
+              >
+                <section
+                  className="af-panel__content radar-form__content"
+                >
+                  <div
+                    className="row af-form__group"
+                  >
+                    <div
+                      className="col-md-3 offset-md-1"
+                    >
+                      <label
+                        className="af-form__group-label"
+                        htmlFor="0"
+                      >
+                        label
+                      </label>
+                    </div>
+                    <div
+                      className="col-md-8 radar-form__input-text"
+                    >
+                      <div
+                        className="af-form__text"
+                      >
+                        <input
+                          autoFocus={true}
+                          className="af-form__input-text"
+                          disabled={false}
+                          id="0"
+                          name="name"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          placeholder={null}
+                          readOnly={false}
+                          tabIndex={null}
+                          type="text"
+                          value=""
+                        />
+                      </div>
+                      <small
+                        className="af-form__help"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="row af-form__group"
+                  >
+                    <div
+                      className="col-md-3 offset-md-1"
+                    >
+                      <label
+                        className="af-form__group-label"
+                        htmlFor="1"
+                      >
+                        label
+                      </label>
+                    </div>
+                    <div
+                      className="col-md-8 radar-form__input-pass"
+                    >
+                      <div
+                        className="af-form__pass-container"
+                      >
+                        <div
+                          className="af-form__pass"
+                        >
+                          <div
+                            className="af-form__pass-strength"
+                          />
+                          <input
+                            autoFocus={false}
+                            className="af-form__input-text"
+                            disabled={false}
+                            id="1"
+                            name="pass"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            placeholder={null}
+                            readOnly={false}
+                            score={null}
+                            strength={null}
+                            tabIndex={null}
+                            type="password"
+                            value=""
+                          />
+                          <button
+                            className="af-form__pass-btn"
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            <i
+                              className="glyphicon glyphicon-eye-open"
+                            />
+                          </button>
+                        </div>
+                        <small
+                          className="af-form__help"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="row af-form__group af-form__group--null af-form__group--label-top"
+                  >
+                    <div
+                      className="col-md-3 offset-md-1"
+                    >
+                      <label
+                        className="af-form__group-label"
+                        htmlFor="2"
+                      >
+                        label
+                      </label>
+                    </div>
+                    <div
+                      className="col-md-8 radar-form__input-textarea"
+                    >
+                      <div
+                        className="af-form__textarea"
+                      >
+                        <textarea
+                          autoFocus={false}
+                          className="af-form__input-textarea"
+                          cols={50}
+                          disabled={false}
+                          id="2"
+                          name="textarea"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          placeholder=""
+                          readOnly={false}
+                          rows={5}
+                          tabIndex={null}
+                          value=""
+                        />
+                      </div>
+                      <small
+                        className="af-form__help"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="row af-form__group"
+                  >
+                    <div
+                      className="col-md-3 offset-md-1"
+                    >
+                      <label
+                        className="af-form__group-label"
+                        htmlFor="3"
+                      >
+                        label
+                      </label>
+                    </div>
+                    <div
+                      className="col-md-8 radar-form__input-select"
+                    >
+                      <div
+                        className="af-form__select"
+                      >
+                        <div
+                          className="af-form__select-container"
+                        >
+                          <select
+                            autoFocus={false}
+                            className="af-form__input-select"
+                            disabled={false}
+                            id="3"
+                            name="select"
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            readOnly={false}
+                            tabIndex={null}
+                            value=""
+                            values={null}
+                          >
+                            <option
+                              value=""
+                            >
+                              - Select -
+                            </option>
+                            <option
+                              value="1"
+                            >
+                              1
+                            </option>
+                            <option
+                              value="2"
+                            >
+                              2
+                            </option>
+                            <option
+                              value="3"
+                            >
+                              3
+                            </option>
+                          </select>
+                          <span
+                            className="glyphicon glyphicon-menu-down"
+                          />
+                        </div>
+                      </div>
+                      <small
+                        className="af-form__help"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="row af-form__group"
+                  >
+                    <div
+                      className="col-md-3 offset-md-1"
+                    >
+                      <label
+                        className="af-form__group-label"
+                        htmlFor="4"
+                      >
+                        label
+                      </label>
+                    </div>
+                    <div
+                      className="col-md-8 radar-form__input-multi-select"
+                    >
+                      <div
+                        className="af-form__select"
+                      >
+                        <div
+                          className="css-10nd86i react-select"
+                          id="4"
+                          onKeyDown={[Function]}
+                        >
+                          <div
+                            className="css-vj8t7z"
+                            onMouseDown={[Function]}
+                            onTouchEnd={[Function]}
+                          >
+                            <div
+                              className="css-1hwfws3"
+                            >
+                              <div
+                                className="css-1492t68"
+                              >
+                                Select
+                              </div>
+                              <div
+                                className="css-1g6gooi"
+                              >
+                                <div
+                                  className=""
+                                  style={
+                                    Object {
+                                      "display": "inline-block",
+                                    }
+                                  }
+                                >
+                                  <input
+                                    aria-autocomplete="list"
+                                    autoCapitalize="none"
+                                    autoComplete="off"
+                                    autoCorrect="off"
+                                    disabled={false}
+                                    id="react-select-2-input"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onFocus={[Function]}
+                                    spellCheck="false"
+                                    style={
+                                      Object {
+                                        "background": 0,
+                                        "border": 0,
+                                        "boxSizing": "content-box",
+                                        "color": "inherit",
+                                        "fontSize": "inherit",
+                                        "opacity": 1,
+                                        "outline": 0,
+                                        "padding": 0,
+                                        "width": "1px",
+                                      }
+                                    }
+                                    tabIndex={null}
+                                    type="text"
+                                    value=""
+                                  />
+                                  <div
+                                    style={
+                                      Object {
+                                        "height": 0,
+                                        "left": 0,
+                                        "overflow": "scroll",
+                                        "position": "absolute",
+                                        "top": 0,
+                                        "visibility": "hidden",
+                                        "whiteSpace": "pre",
+                                      }
+                                    }
+                                  >
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="css-1wy0on6"
+                            >
+                              <span
+                                className="css-d8oujb"
+                              />
+                              <div
+                                aria-hidden="true"
+                                className="css-1ep9fjw"
+                                onMouseDown={[Function]}
+                                onTouchEnd={[Function]}
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="css-19bqh2r"
+                                  focusable="false"
+                                  height={20}
+                                  viewBox="0 0 20 20"
+                                  width={20}
+                                >
+                                  <path
+                                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                                  />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <input
+                            name="multi-select"
+                            type="hidden"
+                            value=""
+                          />
+                        </div>
+                      </div>
+                      <small
+                        className="af-form__help"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className="row af-form__group af-form__group--label-top"
+                  >
+                    <div
+                      className="col-md-3 af-form__group-label offset-md-1"
+                    >
+                      label
+                    </div>
+                    <div
+                      className="col-md-7"
+                    >
+                      <div
+                        className="radar-form__multi-urls"
+                      >
+                        <div
+                          className="row af-form__group"
+                        >
+                          <div
+                            className="col-md-2"
+                          >
+                            <label
+                              className="af-form__group-label"
+                              htmlFor="5-label"
+                            >
+                              Label
+                            </label>
+                          </div>
+                          <div
+                            className="col-md-10"
+                          >
+                            <div
+                              className="af-form__text"
+                            >
+                              <input
+                                autoFocus={null}
+                                className="af-form__input-text"
+                                disabled={false}
+                                id="5-label"
+                                name="label"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                readOnly={false}
+                                tabIndex={null}
+                                type="text"
+                                value="1"
+                              />
+                            </div>
+                            <small
+                              className="af-form__help"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="row af-form__group"
+                        >
+                          <div
+                            className="col-md-2"
+                          >
+                            <label
+                              className="af-form__group-label"
+                              htmlFor="5-url"
+                            >
+                              Url
+                            </label>
+                          </div>
+                          <div
+                            className="col-md-10"
+                          >
+                            <div
+                              className="af-form__text"
+                            >
+                              <input
+                                autoFocus={null}
+                                className="af-form__input-text"
+                                disabled={false}
+                                id="5-url"
+                                name="url"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                readOnly={false}
+                                tabIndex={null}
+                                type="text"
+                                value="1"
+                              />
+                            </div>
+                            <small
+                              className="af-form__help"
+                            />
+                          </div>
+                        </div>
+                        <a
+                          className="btn af-btn--circle af-btn--circle--multi-urls-remove"
+                          href="#"
+                          id="id"
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex={0}
+                          title="Remove"
+                        >
+                          <i
+                            className="glyphicon glyphicon-remove"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        className="radar-form__multi-urls"
+                      >
+                        <div
+                          className="row af-form__group"
+                        >
+                          <div
+                            className="col-md-2"
+                          >
+                            <label
+                              className="af-form__group-label"
+                              htmlFor="5-label"
+                            >
+                              Label
+                            </label>
+                          </div>
+                          <div
+                            className="col-md-10"
+                          >
+                            <div
+                              className="af-form__text"
+                            >
+                              <input
+                                autoFocus={null}
+                                className="af-form__input-text"
+                                disabled={false}
+                                id="5-label"
+                                name="label"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                readOnly={false}
+                                tabIndex={null}
+                                type="text"
+                                value="2"
+                              />
+                            </div>
+                            <small
+                              className="af-form__help"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="row af-form__group"
+                        >
+                          <div
+                            className="col-md-2"
+                          >
+                            <label
+                              className="af-form__group-label"
+                              htmlFor="5-url"
+                            >
+                              Url
+                            </label>
+                          </div>
+                          <div
+                            className="col-md-10"
+                          >
+                            <div
+                              className="af-form__text"
+                            >
+                              <input
+                                autoFocus={null}
+                                className="af-form__input-text"
+                                disabled={false}
+                                id="5-url"
+                                name="url"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                readOnly={false}
+                                tabIndex={null}
+                                type="text"
+                                value="2"
+                              />
+                            </div>
+                            <small
+                              className="af-form__help"
+                            />
+                          </div>
+                        </div>
+                        <a
+                          className="btn af-btn--circle af-btn--circle--multi-urls-remove"
+                          href="#"
+                          id="id"
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex={0}
+                          title="Remove"
+                        >
+                          <i
+                            className="glyphicon glyphicon-remove"
+                          />
+                        </a>
+                      </div>
+                      <div
+                        className="radar-form__multi-urls"
+                      >
+                        <div
+                          className="row af-form__group"
+                        >
+                          <div
+                            className="col-md-2"
+                          >
+                            <label
+                              className="af-form__group-label"
+                              htmlFor="5-label"
+                            >
+                              Label
+                            </label>
+                          </div>
+                          <div
+                            className="col-md-10"
+                          >
+                            <div
+                              className="af-form__text"
+                            >
+                              <input
+                                autoFocus={null}
+                                className="af-form__input-text"
+                                disabled={false}
+                                id="5-label"
+                                name="label"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                readOnly={false}
+                                tabIndex={null}
+                                type="text"
+                                value="3"
+                              />
+                            </div>
+                            <small
+                              className="af-form__help"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          className="row af-form__group"
+                        >
+                          <div
+                            className="col-md-2"
+                          >
+                            <label
+                              className="af-form__group-label"
+                              htmlFor="5-url"
+                            >
+                              Url
+                            </label>
+                          </div>
+                          <div
+                            className="col-md-10"
+                          >
+                            <div
+                              className="af-form__text"
+                            >
+                              <input
+                                autoFocus={null}
+                                className="af-form__input-text"
+                                disabled={false}
+                                id="5-url"
+                                name="url"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                placeholder={null}
+                                readOnly={false}
+                                tabIndex={null}
+                                type="text"
+                                value="3"
+                              />
+                            </div>
+                            <small
+                              className="af-form__help"
+                            />
+                          </div>
+                        </div>
+                        <a
+                          className="btn af-btn--circle af-btn--circle--multi-urls-remove"
+                          href="#"
+                          id="id"
+                          onClick={[Function]}
+                          role="button"
+                          tabIndex={0}
+                          title="Remove"
+                        >
+                          <i
+                            className="glyphicon glyphicon-remove"
+                          />
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      className="col-md-1 offset-md-10 af-form__group-multi-urls-add"
+                    >
+                      <a
+                        className="btn af-btn--circle af-btn--circle--multi-urls-add"
+                        href="#"
+                        id="id"
+                        onClick={[Function]}
+                        role="button"
+                        tabIndex={0}
+                        title="Add"
+                      >
+                        <i
+                          className="glyphicon glyphicon-plus"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    className="row"
+                  >
+                    <div
+                      className="col-md-8 offset-md-4"
+                    >
+                      <button
+                        className="btn af-btn af-btn--hasiconRight af-btn--confirm af-btn--false"
+                        disabled={false}
+                        id="myForm"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="af-btn-text"
+                        >
+                          Valider
+                        </span>
+                        <i
+                          className="glyphicon glyphicon-arrowthin-right"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </section>
+                 
+                
+              </div>
+            </article>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="af-modal__overlay"
+    onClick={[Function]}
+  />,
+]
+`;

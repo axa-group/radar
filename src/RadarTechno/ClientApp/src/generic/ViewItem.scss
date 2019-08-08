@@ -1,0 +1,50 @@
+@import '@axa-fr/react-toolkit-restitution/dist/restitution.scss';
+@import '../layout/Theme/Functions.scss';
+
+.af-restitution {
+  background: getColor(bg-color);
+  color: getColor(text-color);
+  &__content {
+    max-width: 100%;
+  }
+  &__listdef-item {
+    color: getColor(rest-item-color);
+  }
+  &__listdef-value {
+    color: getColor(rest-value-color);
+  }
+}
+
+.radar-restitution {
+  &__text {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  &__links {
+    text-decoration: underline;
+    padding-left: 15px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    a {
+      color: getColor(link-color);
+      &:hover {
+        color: getColor(link-hover-color);
+      }
+    }
+  }
+  &__table {
+    width: 100%;
+    margin: 1rem 0;
+  }
+  &__col {
+    &--sticky {
+      position: fixed;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .radar, .radar-sticky {
+    display: none;
+  }
+}

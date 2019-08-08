@@ -1,0 +1,44 @@
+@import '@axa-fr/react-toolkit-layout-header/dist/NavBar/nav.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Title/title-bar.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Drawer/drawer.scss';
+@import '@axa-fr/react-toolkit-button/dist/button.scss';
+@import '../layout/Theme/Functions.scss';
+
+.af-nav-container, .af-nav.af-drawer {
+  background: getColor(bg-color);
+  color: getColor(text-color);
+}
+
+.af-title-bar{
+  &__wrapper {
+    justify-content: start;
+  }
+}
+
+.af-btn--circle.af-title-bar__mobile-menu {
+  display: none;
+}
+
+.af-nav {
+  &__list {
+    align-items: flex-end;
+  }
+  &__link {
+    color: getColor(text-color);
+  }
+}
+
+@media (max-width: 767px) {
+  .af-title-bar {
+    &--show-menu-button {
+      .af-btn--circle.af-title-bar__mobile-menu {
+        display: inline-block;
+      }
+    }
+  }
+  &--hide-menu-buton {  
+    .af-btn--circle.af-title-bar__mobile-menu {
+      display: none;
+    }
+  }
+}

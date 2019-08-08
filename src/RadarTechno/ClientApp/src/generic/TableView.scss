@@ -1,0 +1,14 @@
+@import '@axa-fr/react-toolkit-link/dist/link.scss';
+
+.af-container-header {
+  display: flex;
+  .af-btn--{
+    &group {
+      display: flex;
+      margin: 0 0 0 0.75rem;
+    }
+    &circle {
+      margin: 0 0.75rem 0 0;
+    }
+  }
+}

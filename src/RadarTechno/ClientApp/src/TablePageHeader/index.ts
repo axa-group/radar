@@ -1,0 +1,1 @@
+export { TablePageHeader } from './TablePageHeader';

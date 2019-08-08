@@ -1,0 +1,10 @@
+export const LOGIN = 'LOGIN';
+export const ON_SUBMIT = 'ON_SUBMIT';
+export const SET_ERROR = 'SET_ERROR';
+export const SET_ITEMS = 'SET_ITEMS';
+export const SET_POSITION = 'SET_POSITION';
+export const SET_TITLE = 'SET_TITLE';
+export const SET_VISIBLE = 'SET_VISIBLE';
+export const STOP_LOADING = 'STOP_LOADING';
+export const UPDATE_PAGING = 'UPDATE_PAGING';
+export const VALIDATE_TOKEN = 'VALIDATE_TOKEN';

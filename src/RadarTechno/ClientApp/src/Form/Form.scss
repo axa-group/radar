@@ -1,0 +1,72 @@
+@import '@axa-fr/react-toolkit-alert/dist/alert.scss';
+@import '@axa-fr/react-toolkit-form-core/dist/form.scss';
+@import '@axa-fr/react-toolkit-title/dist/title.scss';
+@import '@axa-fr/react-toolkit-button/dist/button.scss';
+@import '@axa-fr/react-toolkit-form-input-text/dist/inputtext.scss';
+@import '@axa-fr/react-toolkit-form-input-textarea/dist/textarea.scss';
+@import '@axa-fr/react-toolkit-form-input-pass/dist/pass.scss';
+@import '@axa-fr/react-toolkit-form-input-select/dist/select.scss';
+@import '@axa-fr/react-toolkit-panel/dist/panel.scss';
+@import '@axa-fr/react-toolkit-form-input-select-multi/dist/select.scss';
+@import '../layout/Theme/Functions.scss';
+
+.af-form__input-select {
+  z-index: 0;
+}
+
+.radar-form {
+  padding: 0;
+  margin-bottom: 1rem;
+  background: none;
+  &__input-text, &__input-pass {
+    input {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  &__input-pass {
+    input{
+      min-width: 250px;
+    }
+  }
+  &__input-textarea {
+    textarea {
+      max-width: 80%;
+    }
+  }
+  &__multi-urls {
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    padding: 1rem 15px;
+    .af-form__group {
+      margin-bottom: 1rem;
+    }
+    .af-btn--circle--multi-urls-remove {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}
+
+.af-radar-panel {
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .af-form {
+    &__group {
+      margin-bottom: 1rem;
+      &-label {
+        margin-bottom: 1rem
+      } 
+      &-multi-urls-add {
+        text-align: right;
+      }
+    }
+    &__message {
+      position: relative;
+    } 
+  }
+}

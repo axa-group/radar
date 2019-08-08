@@ -1,0 +1,31 @@
+@import '@axa-fr/react-toolkit-action/dist/button.scss';
+@import '@axa-fr/react-toolkit-link/dist/link.scss';
+@import '../layout/Theme/Functions.scss';
+
+.radar-table {
+  &__header {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    .af-link--{
+      &group {
+        display: flex;
+      }
+      &hasIconLeft {
+        color: getColor(link-color);
+        margin: 0 0.75rem;
+      }
+    }
+  }
+  &__title {
+    width: auto;
+    flex-grow: 1;
+    color: getColor(text-color);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .radar-table__header {
+    flex-direction: column;
+  }
+}

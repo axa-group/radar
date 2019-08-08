@@ -1,0 +1,11 @@
+@import '@axa-fr/react-toolkit-action/dist/button.scss';
+@import '@axa-fr/react-toolkit-icon/dist/icons.scss';
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.radar-form__header {
+  display: inline-flex;
+  width: 100%;
+  .af-btn--circle--hasiconLeft {
+    margin: 0 1rem;
+  }
+}

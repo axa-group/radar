@@ -1,0 +1,57 @@
+$white: #fff;
+$white2: #f5f5f5;
+$gray: #e5e5e5;
+$dark: #323639;
+$light-dark: #3f4143;
+$blue: #3032c1;
+$dark-blue: #00008f;
+
+$colors: (
+  bg-color: $white,
+  text-color: $dark,
+  link-color: $blue,
+  link-hover-color: $dark-blue,
+  input-focus-color: $dark-blue,
+  table-cell-color: $white2,
+  rest-item-color: $dark,
+  rest-value-color: $blue,
+  button-color: $white,
+  button-hover-color: $dark-blue,
+  button-bg-color: $dark-blue,
+  button-hover-bg-color: $white,
+  table-button-color: $dark-blue,
+  table-button-hover-color: $white,
+  table-button-bg-color: $white,
+  table-button-hover-bg-color: $dark-blue
+);
+
+$dark-colors: (
+  bg-color: $dark,
+  text-color: $white,
+  link-color: $white,
+  link-hover-color: $gray,
+  input-focus-color: $white,
+  table-cell-color: $light-dark,
+  rest-item-color: $gray,
+  rest-value-color: $white,
+  button-color: $dark,
+  button-hover-color: $white,
+  button-bg-color: $white,
+  button-hover-bg-color: $dark,
+  table-button-color: $white,
+  table-button-hover-color: $dark,
+  table-button-bg-color: $dark,
+  table-button-hover-bg-color: $white
+);
+
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+}
+
+body.dark {
+  @each $name, $color in $dark-colors {
+    --color-#{$name}: #{$color};
+  }
+}

@@ -1,0 +1,839 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots DataTable Data table 1`] = `
+<div
+  className={null}
+  style={
+    Object {
+      "minHeight": "94px",
+      "position": "relative",
+    }
+  }
+>
+  <table
+    className="af-table"
+  >
+    <thead
+      className="af-table-thead"
+    >
+      <tr
+        className="af-table__tr"
+      >
+        <th
+          className="af-table__th af-table__th--radar af-table__th-sortable"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <span
+            className="af-table__th-content"
+          >
+            <button
+              className="af-btn af-btn--table-sorting"
+              id="label1-sort"
+              onClick={[Function]}
+            >
+              <div
+                className="af-table__th-button-text"
+              >
+                <span>
+                  Label1
+                </span>
+                <div
+                  className="glyphicon glyphicon-sorting"
+                />
+              </div>
+              <div
+                className="af-table__th-filter af-form__text-wrapper"
+              >
+                <input
+                  className="af-form__input-text"
+                  disabled={false}
+                  id="label1-filter"
+                  name="label1"
+                  onBlur={null}
+                  onChange={[Function]}
+                  onFocus={null}
+                  readOnly={false}
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="glyphicon glyphicon-close af-form__clear"
+                  onClick={[Function]}
+                  role="button"
+                />
+              </div>
+            </button>
+          </span>
+        </th>
+        <th
+          className="af-table__th af-table__th--radar af-table__th-sortable"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <span
+            className="af-table__th-content"
+          >
+            <button
+              className="af-btn af-btn--table-sorting"
+              id="label2-sort"
+              onClick={[Function]}
+            >
+              <div
+                className="af-table__th-button-text"
+              >
+                <span>
+                  Label2
+                </span>
+                <div
+                  className="glyphicon glyphicon-sorting"
+                />
+              </div>
+              <div
+                className="af-table__th-filter af-form__text-wrapper"
+              >
+                <input
+                  className="af-form__input-text"
+                  disabled={false}
+                  id="label2-filter"
+                  name="label2"
+                  onBlur={null}
+                  onChange={[Function]}
+                  onFocus={null}
+                  readOnly={false}
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="glyphicon glyphicon-close af-form__clear"
+                  onClick={[Function]}
+                  role="button"
+                />
+              </div>
+            </button>
+          </span>
+        </th>
+        <th
+          className="af-table__th af-table__th--radar af-table__th-sortable"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <span
+            className="af-table__th-content"
+          >
+            <button
+              className="af-btn af-btn--table-sorting"
+              id="label3-sort"
+              onClick={[Function]}
+            >
+              <div
+                className="af-table__th-button-text"
+              >
+                <span>
+                  Label3
+                </span>
+                <div
+                  className="glyphicon glyphicon-sorting"
+                />
+              </div>
+              <div
+                className="af-table__th-filter af-form__text-wrapper"
+              >
+                <input
+                  className="af-form__input-text"
+                  disabled={false}
+                  id="label3-filter"
+                  name="label3"
+                  onBlur={null}
+                  onChange={[Function]}
+                  onFocus={null}
+                  readOnly={false}
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="glyphicon glyphicon-close af-form__clear"
+                  onClick={[Function]}
+                  role="button"
+                />
+              </div>
+            </button>
+          </span>
+        </th>
+        <th
+          className="af-table__th af-table__th--radar af-table__th-sortable"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <span
+            className="af-table__th-content"
+          >
+            <button
+              className="af-btn af-btn--table-sorting"
+              id="label4-sort"
+              onClick={[Function]}
+            >
+              <div
+                className="af-table__th-button-text"
+              >
+                <span>
+                  Label4
+                </span>
+                <div
+                  className="glyphicon glyphicon-sorting"
+                />
+              </div>
+              <div
+                className="af-table__th-filter af-form__text-wrapper"
+              >
+                <input
+                  className="af-form__input-text"
+                  disabled={false}
+                  id="label4-filter"
+                  name="label4"
+                  onBlur={null}
+                  onChange={[Function]}
+                  onFocus={null}
+                  readOnly={false}
+                  type="text"
+                  value=""
+                />
+                <div
+                  className="glyphicon glyphicon-close af-form__clear"
+                  onClick={[Function]}
+                  role="button"
+                />
+              </div>
+            </button>
+          </span>
+        </th>
+        <th
+          className="af-table__th af-table__th--radar"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <span
+            className="af-table__th-content"
+          >
+            Actions
+          </span>
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      className="af-table__body"
+    >
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr
+        className="af-table__tr"
+      >
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value1
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value2
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value3
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          value4
+        </td>
+        <td
+          className="af-table__cell"
+          colSpan={null}
+          rowSpan={null}
+        >
+          <div
+            className="af-btn--group af-btn--table-action-group"
+          >
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-time"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-edit"
+              />
+            </button>
+            <button
+              className="btn af-btn--circle af-btn--circle-reverse af-btn--table-action"
+              onClick={[Function]}
+              role="button"
+            >
+              <i
+                className="glyphicon glyphicon-eye-open"
+              />
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div
+    className=""
+  >
+    <div
+      className="af-paging__limit"
+    >
+      <div
+        className="af-paging__limit"
+      >
+        <form
+          className=""
+        >
+          <div
+            className="af-form__group"
+          >
+            <div
+              className="col col-sm-2 col-md-2 col-lg-2 col-xl-2"
+            >
+              <label
+                className="af-form__group-label"
+                htmlFor="tablePaging"
+              >
+                Afficher
+              </label>
+            </div>
+            <div
+              className="col col-sm-10 col-md-10 col-lg-10 col-xl-10"
+            >
+              <div
+                className="af-form__select"
+              >
+                <div
+                  className="af-form__select-container"
+                >
+                  <select
+                    className="af-form__input-select"
+                    id="tablePaging"
+                    onChange={[Function]}
+                    value={10}
+                  >
+                    <option
+                      value={5}
+                    >
+                      5
+                    </option>
+                    <option
+                      value={10}
+                    >
+                      10
+                    </option>
+                    <option
+                      value={25}
+                    >
+                      25
+                    </option>
+                    <option
+                      value={50}
+                    >
+                      50
+                    </option>
+                    <option
+                      value={100}
+                    >
+                      100
+                    </option>
+                  </select>
+                  <span
+                    className="glyphicon glyphicon-menu-down"
+                  />
+                </div>
+                <span
+                  className="af-form__input-cmplt"
+                >
+                  éléments
+                </span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      className="af-paging__pager"
+    >
+      <nav
+        className=""
+      >
+        <ul
+          className="af-pager__pagination"
+        >
+          <li
+            className="af-pager__item af-pager__item--disabled"
+          >
+            <span
+              className="af-pager__item-nolink"
+            >
+              « Précédent
+            </span>
+          </li>
+          <li
+            className="af-pager__item af-pager__item--active"
+          >
+            <a
+              className="af-pager__item-link"
+              href="#"
+              onClick={[Function]}
+            >
+              <span>
+                1
+              </span>
+            </a>
+          </li>
+          <li
+            className="af-pager__item af-pager__item--disabled"
+          >
+            <span
+              className="af-pager__item-nolink"
+            >
+              Suivant »
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+   
+  
+</div>
+`;

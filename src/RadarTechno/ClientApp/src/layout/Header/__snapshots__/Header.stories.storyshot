@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layout Header 1`] = `
+<div
+  className="af-header"
+>
+  <div
+    className="container af-header__wrapper"
+  >
+    <header
+      className="af-header__content"
+      role="banner"
+    >
+      <div
+        className="af-header__name"
+      >
+        <a
+          className="af-logo"
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            alt="Axa Logo"
+            className="af-logo__brand"
+            src="logo-axa.svg"
+          />
+        </a>
+        <h2
+          className="af-header__title"
+        >
+          Technology Radar
+          <small
+            className="af-header__subtitle"
+          >
+            
+          </small>
+        </h2>
+      </div>
+      <div
+        className="radar-header__user"
+      >
+        <div
+          className="af-info-user"
+        >
+          <span
+            className="af-info-user__name"
+          >
+            Test
+          </span>
+          <span
+            className="af-info-user__profile"
+          >
+            [
+            AXA France
+            ]
+          </span>
+        </div>
+        <div
+          className="radar-header__logout"
+        >
+          <a
+            className="af-link af-link--hasIconLeft radar-header__theme-link"
+            href="#"
+          >
+            <i
+              className="glyphicon glyphicon-adjust"
+            />
+            <span
+              className="af-link__text"
+            >
+              Change theme
+            </span>
+          </a>
+          <a
+            className="af-link af-link--hasIconLeft radar-header__logout-link"
+            href="login"
+            onClick={[Function]}
+          >
+            <i
+              className="glyphicon glyphicon-off"
+            />
+            <span
+              className="af-link__text"
+            >
+              Logout
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+</div>
+`;

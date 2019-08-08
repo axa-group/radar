@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Users View user modal 1`] = `
+Array [
+  <div
+    className="af-modal af-modal--opened"
+  >
+    <div
+      className="af-modal__header"
+    >
+      <h2
+        className="af-modal__header-title"
+      >
+        Test
+      </h2>
+      <button
+        aria-label="Close"
+        className="af-modal__header-close-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          className="glyphicon glyphicon-close"
+        />
+      </button>
+    </div>
+    <div
+      className="af-modal__body"
+    >
+      <div
+        className="container af-restitution"
+      >
+        <section
+          className="af-restitution__content"
+        >
+          <div
+            className="row af-restitution__listdef"
+          >
+            <div
+              className="col-md-6 af-restitution__listdef-item"
+            >
+              <span
+                className="radar-restitution__text"
+              >
+                Name
+              </span>
+            </div>
+            <div
+              className="col-md-6 af-restitution__listdef-value"
+            >
+              
+            </div>
+          </div>
+          <div
+            className="row af-restitution__listdef"
+          >
+            <div
+              className="col-md-6 af-restitution__listdef-item"
+            >
+              <span
+                className="radar-restitution__text"
+              >
+                Email
+              </span>
+            </div>
+            <div
+              className="col-md-6 af-restitution__listdef-value"
+            >
+              Test
+            </div>
+          </div>
+          <div
+            className="row af-restitution__listdef"
+          >
+            <div
+              className="col-md-6 af-restitution__listdef-item"
+            >
+              <span
+                className="radar-restitution__text"
+              >
+                Role
+              </span>
+            </div>
+            <div
+              className="col-md-6 af-restitution__listdef-value"
+            >
+              user
+            </div>
+          </div>
+          <div
+            className="row af-restitution__listdef"
+          >
+            <div
+              className="col-md-6 af-restitution__listdef-item"
+            >
+              <span
+                className="radar-restitution__text"
+              >
+                Entity
+              </span>
+            </div>
+            <div
+              className="col-md-6 af-restitution__listdef-value"
+            >
+              AXA France
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="af-modal__overlay"
+    onClick={[Function]}
+  />,
+]
+`;

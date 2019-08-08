@@ -1,0 +1,103 @@
+@import '@axa-fr/react-toolkit-table/dist/table.scss';
+@import '@axa-fr/react-toolkit-table/dist/Pager/pager.scss';
+@import '@axa-fr/react-toolkit-table/dist/Paging/paging.scss';
+@import '@axa-fr/react-toolkit-form-input-select/dist/select.scss';
+@import '@axa-fr/react-toolkit-action/dist/button.scss';
+@import '@axa-fr/react-toolkit-icon/dist/icons.scss';
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+@import '../layout/Theme/Functions.scss';
+
+.af-table {
+  background: getColor(bg-color);
+  color: getColor(text-color);
+  &__th {
+    box-shadow: 0 0 1px 1px getColor(bg-color);
+    &--radar {
+      text-align: center;
+      padding: 0;
+      min-width: 100px;
+    }
+    &-filter {
+      width: 100%;
+      .af-form__input-text {
+        width: 100%;
+        padding: 0.5625rem 2rem 0.5625rem 1.2rem;
+      }
+    }
+    &-button-text {
+      display: flex;
+      width: 100%;
+      margin: 0 0 1rem 0;
+    }
+    .glyphicon {
+      &.glyphicon-close {
+        color: getColor(text-color);
+        right: 1rem;
+      }
+      &.glyphicon-sorting,
+      &.glyphicon-arrow-xs-up,
+      &.glyphicon-arrow-xs-down {
+        font-size: 1.2rem;
+        top: 25%;
+      }
+    }
+  }
+  &__tr:nth-child(2n + 1) .af-table__cell {
+    background-color: getColor(table-cell-color);
+  }
+  &__cell {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+    background-color: getColor(table-cell-color);
+    color: getColor(text-color);
+  }
+  &--empty {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+.af-btn {
+  &--table-action.af-btn--circle  {
+    margin: 0 5px;
+    color: getColor(table-button-color);
+    border-color: getColor(table-button-color);
+    background-color: getColor(table-button-bg-color);
+    &:hover {
+      color: getColor(table-button-hover-color);
+      border-color: getColor(table-button-hover-color);
+      background-color: getColor(table-button-hover-bg-color);
+    }
+  }
+  &--table-action-group {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &--table-sorting {
+    flex-wrap: wrap;
+  }
+}
+
+.af-pager__item-link {
+  color: getColor(link-color);
+  &:hover {
+    color: getColor(link-hover-color);
+  }
+}
+
+.af-paging__limit {
+  color: getColor(text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .af-table {
+    width: 100%;
+    overflow-x: scroll;
+    display: block;
+  }
+}

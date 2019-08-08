@@ -1,0 +1,45 @@
+@import '@axa-fr/react-toolkit-icon/dist/icons.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Header/header.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Infos/infos.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Name/name.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/User/user.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Logo/logo.scss';
+
+.radar-header {
+  &__user {
+    order: 2;
+  }
+  &__logout {
+    text-align: right;
+    min-width: 200px;
+  }
+  &__theme-link {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .af-title-bar__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .af-title-bar{
+    &__title {
+      display: flex;
+      flex-direction: column;
+      line-height: 2rem;
+    }
+    &__subtitle {
+      margin: 0;
+    }
+  }
+  .af-info-user {
+    margin-bottom: 0;
+  }
+  .radar-header {
+    &__logout {
+      text-align: left;
+      flex-direction: column;
+    }
+  }
+}

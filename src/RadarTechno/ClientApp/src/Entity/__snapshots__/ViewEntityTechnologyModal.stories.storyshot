@@ -1,0 +1,412 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Entities View entity technology modal 1`] = `
+Array [
+  <div
+    className="af-modal af-modal--opened"
+  >
+    <div
+      className="af-modal__header"
+    >
+      <h2
+        className="af-modal__header-title"
+      >
+        Node.JS
+      </h2>
+      <button
+        aria-label="Close"
+        className="af-modal__header-close-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          className="glyphicon glyphicon-close"
+        />
+      </button>
+    </div>
+    <div
+      className="af-modal__body"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="af-restitution col-md-6"
+        >
+          <section
+            className="af-restitution__content"
+          >
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Status
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                Excel
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Category
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                frameworks
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Description
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                description
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Scope
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                scope
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Reporter
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                reporter
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Useful links
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                <ul
+                  className="af-list radar-restitution__links"
+                >
+                  <li>
+                    <a
+                      href="url"
+                      rel="noopener"
+                      target="_blank"
+                    >
+                      label
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Last updated on
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                2018-07-23T14:41:36.328Z
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Version
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                0
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Status
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                Excel
+              </div>
+            </div>
+            <div
+              className="row af-restitution__listdef"
+            >
+              <div
+                className="col-md-6 af-restitution__listdef-item"
+              >
+                <span
+                  className="radar-restitution__text"
+                >
+                  Recommended status
+                </span>
+              </div>
+              <div
+                className="col-md-6 af-restitution__listdef-value"
+              >
+                No recommendation
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          className="col-md-6"
+        >
+          <div
+            className="radar__container radar-sticky"
+            style={
+              Object {
+                "maxWidth": "100%",
+                "width": 400,
+              }
+            }
+          >
+            <div
+              className="radar  radar--force-display"
+              style={
+                Object {
+                  "height": "400px",
+                  "width": "400px",
+                }
+              }
+            >
+              <div
+                className="radar__inner-radar radar__inner-radar--1 
+            null"
+                style={
+                  Object {
+                    "backgroundColor": "#777",
+                    "height": 400,
+                    "width": 400,
+                  }
+                }
+              />
+              <div
+                className="radar__inner-radar radar__inner-radar--2 
+          null"
+                style={
+                  Object {
+                    "height": 352.85714285714283,
+                    "width": 352.85714285714283,
+                  }
+                }
+              />
+              <div
+                className="radar__inner-radar radar__inner-radar--3 
+            null"
+                style={
+                  Object {
+                    "backgroundColor": "#ef9a9a",
+                    "height": 342.85714285714283,
+                    "width": 342.85714285714283,
+                  }
+                }
+              />
+              <div
+                className="radar__inner-radar radar__inner-radar--4
+            null"
+                style={
+                  Object {
+                    "backgroundColor": "#ef5350",
+                    "height": 266.66666666666663,
+                    "width": 266.66666666666663,
+                  }
+                }
+              />
+              <div
+                className="radar__inner-radar radar__inner-radar--5
+            null"
+                style={
+                  Object {
+                    "backgroundColor": "#d32f2f",
+                    "height": 160,
+                    "width": 160,
+                  }
+                }
+              >
+                <div
+                  className="radar-technology__container"
+                  style={
+                    Object {
+                      "bottom": "56.5685424949238px",
+                      "right": "56.568542494923804px",
+                    }
+                  }
+                >
+                  <span
+                    className="radar-technology__name "
+                  >
+                    Node.JS
+                  </span>
+                  <div
+                    className="radar-technology "
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                  >
+                    <div
+                      className="radar-technology__tooltip radar-technology__tooltip--aligned"
+                    >
+                      <span
+                        className="radar-technology__tooltiptext"
+                      >
+                        Node.JS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="radar__legend--container"
+              style={
+                Object {
+                  "width": 400,
+                }
+              }
+            >
+              <div
+                className="radar__legend radar__legend--deprecated"
+                style={
+                  Object {
+                    "backgroundColor": "#777",
+                    "width": 47.14285714285717,
+                  }
+                }
+              >
+                Deprecated
+              </div>
+              <div
+                className="radar__legend"
+                style={
+                  Object {
+                    "width": "10px",
+                  }
+                }
+              />
+              <div
+                className="radar__legend radar__legend--assess"
+                style={
+                  Object {
+                    "backgroundColor": "#ef9a9a",
+                    "width": 76.1904761904762,
+                  }
+                }
+              >
+                Assess
+              </div>
+              <div
+                className="radar__legend radar__legend--reinforce"
+                style={
+                  Object {
+                    "backgroundColor": "#ef5350",
+                    "width": 106.66666666666663,
+                  }
+                }
+              >
+                Reinforce
+              </div>
+              <div
+                className="radar__legend radar__legend--excel"
+                style={
+                  Object {
+                    "backgroundColor": "#d32f2f",
+                    "width": 160,
+                  }
+                }
+              >
+                Excel
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="af-modal__overlay"
+    onClick={[Function]}
+  />,
+]
+`;

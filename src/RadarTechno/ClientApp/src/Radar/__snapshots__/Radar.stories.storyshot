@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Radar Technology radar 1`] = `
+<div
+  className="radar__container "
+  style={
+    Object {
+      "maxWidth": "100%",
+      "width": 600,
+    }
+  }
+>
+  <div
+    className="radar  "
+    style={
+      Object {
+        "height": "600px",
+        "width": "600px",
+      }
+    }
+  >
+    <div
+      className="radar__inner-radar radar__inner-radar--1 
+            null"
+      style={
+        Object {
+          "backgroundColor": "#777",
+          "height": 600,
+          "width": 600,
+        }
+      }
+    >
+      <div
+        className="radar-technology__container"
+        style={
+          Object {
+            "bottom": "397.4950262812949px",
+            "right": "397.49502628129494px",
+          }
+        }
+      >
+        <span
+          className="radar-technology__name "
+        >
+          Angular 2
+        </span>
+        <div
+          className="radar-technology "
+          id="5823926b69170e15d895fda2"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="radar-technology__tooltip radar-technology__tooltip--deprecated"
+          >
+            <span
+              className="radar-technology__tooltiptext"
+            >
+              Angular 2
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="radar__inner-radar radar__inner-radar--2 
+          null"
+      style={
+        Object {
+          "height": 524.2857142857142,
+          "width": 524.2857142857142,
+        }
+      }
+    />
+    <div
+      className="radar__inner-radar radar__inner-radar--3 
+            null"
+      style={
+        Object {
+          "backgroundColor": "#FAA1AC",
+          "height": 514.2857142857142,
+          "width": 514.2857142857142,
+        }
+      }
+    />
+    <div
+      className="radar__inner-radar radar__inner-radar--4
+            null"
+      style={
+        Object {
+          "backgroundColor": "#F86382",
+          "height": 400,
+          "width": 400,
+        }
+      }
+    />
+    <div
+      className="radar__inner-radar radar__inner-radar--5
+            null"
+      style={
+        Object {
+          "backgroundColor": "#AB082A",
+          "height": 240,
+          "width": 240,
+        }
+      }
+    />
+  </div>
+  <div
+    className="radar__legend--container"
+    style={
+      Object {
+        "width": 600,
+      }
+    }
+  >
+    <div
+      className="radar__legend radar__legend--deprecated"
+      style={
+        Object {
+          "backgroundColor": "#777",
+          "width": 75.71428571428578,
+        }
+      }
+    >
+      Deprecated
+    </div>
+    <div
+      className="radar__legend"
+      style={
+        Object {
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="radar__legend radar__legend--assess"
+      style={
+        Object {
+          "backgroundColor": "#FAA1AC",
+          "width": 114.28571428571422,
+        }
+      }
+    >
+      Assess
+    </div>
+    <div
+      className="radar__legend radar__legend--reinforce"
+      style={
+        Object {
+          "backgroundColor": "#F86382",
+          "width": 160,
+        }
+      }
+    >
+      Reinforce
+    </div>
+    <div
+      className="radar__legend radar__legend--excel"
+      style={
+        Object {
+          "backgroundColor": "#AB082A",
+          "width": 240,
+        }
+      }
+    >
+      Excel
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+@import '@axa-fr/react-toolkit-collapse/dist/accordion.scss';
+@import '../layout/Theme/Functions.scss';
+
+.monaco-editor-background {
+  background-color: getColor(bg-color);
+}
+
+.af-accordion__item-header--radar {
+  background: none;
+  .af-accordion__item {
+    &-title, &-toggle {
+      color: getColor(text-color);
+    }
+  }
+}
+.af-accordion__block {
+  padding: 0;
+}
+.af-restitution {
+  box-shadow: none;
+}
+
+.radar-restitution__differences {
+  min-height: 250px;
+}

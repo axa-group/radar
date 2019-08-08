@@ -1,0 +1,91 @@
+@import '@axa-fr/react-toolkit-action/dist/button.scss';
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+@import '../layout/Theme/Functions.scss';
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.af-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 65%;
+  height: 100%;
+  background: getColor(bg-color);
+  z-index: 100;
+  overflow-y: scroll;
+  -webkit-transform: translateX(+100%);
+  transform: translateX(+100%);
+  -webkit-transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  &--opened {
+    -webkit-transform: none;
+    transform: none;
+  }
+  &__header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    background: #3032c1;
+    color: #fff;
+    padding: 1rem 2rem;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    &-title {
+      font-weight: 500;
+    }
+    &-close-btn {
+      font-size: 1rem;
+      line-height: 1rem;
+      border: none;
+      box-shadow: none;
+      background: 0 0;
+      padding: .5rem;
+      color: #fff;
+      cursor: pointer;
+      .glyphicon-close {
+        font-size: 1rem;
+        line-height: 1rem;
+        border: none;
+        box-shadow: none;
+        background: 0 0;
+        padding: .5rem;
+      }
+    }
+  }
+  &__body {
+    padding: 0 2rem;
+    margin-top: 1rem;
+    z-index: 9;
+  }
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .af-modal {
+    transition: all 0s;
+    width: 100%;
+    &__header {
+      width: 100%;
+      padding: 1rem;
+    }
+    &--opened {
+      .af-modal__dialog--opened {
+        display: block;
+      }
+    }
+    &__body {
+      padding: 0;
+    }
+  }
+}

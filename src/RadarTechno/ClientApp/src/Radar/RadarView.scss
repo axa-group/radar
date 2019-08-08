@@ -1,0 +1,81 @@
+@import '@axa-fr/react-toolkit-popover/dist/popover.scss';
+@import '@axa-fr/react-toolkit-tabs/dist/tabs.scss';
+@import '@axa-fr/react-toolkit-badge/dist/badge.scss';
+@import '../layout/Theme/Functions.scss';
+
+.af-tabs__item--radar {
+  font-size: 1.1rem;
+}
+
+.af-tabs__content {
+  background: getColor(bg-color);
+  color: getColor(text-color);
+}
+
+.rt-radar {
+  &__badge {
+    margin: 0 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+  }
+  &__container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .radar-sticky {
+      top: 1.5rem;
+    }
+  }
+  &__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &__technology {
+    margin: 10px 0;
+    cursor: pointer;
+    &:hover {
+      .rt-radar__technology-name {
+        text-decoration: underline dotted;
+      }
+    }
+  }
+  &__status {
+    display: flex;
+    align-items: baseline;
+    &-title {
+      margin-right: 10px;
+    }
+    &-help {
+      button {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-md-6.rt-radar__container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rt-radar__badge {
+    display: inline-block;
+    margin: 0;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .col-md-6.rt-radar__container {
+    display: none;
+  }
+  .af-tabs__control {
+    overflow: scroll;
+  }
+}

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Layout Footer 1`] = `
+<footer
+  className="af-footer"
+>
+  <div
+    className="container-fluid container"
+  >
+    <a
+      className="af-logo"
+      href="https://www.axa.fr/"
+      target="blank"
+      title="Site Axa"
+    >
+      <img
+        alt="Logo Axa"
+        className="af-logo__brand"
+        src="logo-axa.svg"
+      />
+    </a>
+    <div
+      className="af-footer-content"
+    >
+      @ 2018 AXA Tous droits réservés
+    </div>
+  </div>
+</footer>
+`;

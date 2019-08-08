@@ -1,0 +1,48 @@
+@import '@axa-fr/react-toolkit-loader/dist/spinner.scss';
+@import '../Theme/Functions.scss';
+
+body.dark, .af-panel, .af-form__select-container, input, textarea, select, option {
+  background: getColor(bg-color);
+  color: getColor(text-color);
+}
+
+textarea.af-form__input-textarea:focus, input.af-form__input-text:focus {
+  color: getColor(input-focus-color);
+}
+
+.af-btn--circle {
+  background: getColor(button-bg-color);
+  color: getColor(button-color);
+  border-color: getColor(button-color);
+  &:hover, &:focus, &:focus:hover {
+    background: getColor(button-hover-bg-color);
+    color: getColor(button-hover-color);
+    border-color: getColor(button-hover-color);
+  }
+}
+
+.af-link {
+  color: getColor(link-color);
+  &:hover {
+    color: getColor(link-hover-color);
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .af-home.container {
+      max-width: 1060px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .af-home.container {
+      max-width: 860px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
