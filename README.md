@@ -1,6 +1,6 @@
 # Technology Radar
 
-[![Build status](https://dev.azure.com/axaguildev/radar/_apis/build/status/AxaGuilDEv.radar?branch=master)](https://dev.azure.com/axaguildev/radar)
+[![Build Status](https://dev.azure.com/axaguildev/radar/_apis/build/status/axa-group.radar?branchName=master)](https://dev.azure.com/axaguildev/radar/_build/latest?definitionId=6&branchName=master)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=axa-group_radar) [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=reliability_rating) [![Security](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=security_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=security_rating) [![Code Corevage](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=coverage)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=Coverage) [![Twitter](https://img.shields.io/twitter/follow/GuildDEvOpen?style=social)](https://twitter.com/intent/follow?screen_name=GuildDEvOpen)
 
 <p align="center">
