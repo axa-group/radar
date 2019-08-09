@@ -1,4 +1,4 @@
-# @axa-fr/radar
+# Technology Radar
 
 [![Build status](https://dev.azure.com/axaguildev/radar/_apis/build/status/AxaGuilDEv.radar?branch=master)](https://dev.azure.com/axaguildev/radar)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=alert_status)](https://sonarcloud.io/dashboard?id=axa-group_radar) [![Reliability](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=reliability_rating) [![Security](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=security_rating)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=security_rating) [![Code Corevage](https://sonarcloud.io/api/project_badges/measure?project=axa-group_radar&metric=coverage)](https://sonarcloud.io/component_measures?id=axa-group_radar&metric=Coverage) [![Twitter](https://img.shields.io/twitter/follow/GuildDEvOpen?style=social)](https://twitter.com/intent/follow?screen_name=GuildDEvOpen)
@@ -62,6 +62,10 @@ A technology can have one of the following statuses in an entity :
 
 Only the Excel, Reinforce, Assess and Deprecated technologies are displayed on the radar.
 ![statuses displayed on radar](./docs/img/status.png)
+
+| Excel                                                                                                                                                                                              | Reinforce                                                                                                                                                             | Assess                                                                                                                                             | -   | Deprecated                                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| We have capacity to use these solutions and they have already been deployed. We need to reinforce in order to **excel** on these solutions that will be massively deployed or already are critical | Assessments have demonstrated pertinance og these solutions. We have to **reinforce** their usages to relevant use cases and build a capacity on the top of it at AXA | We think these solutions may bring value to AXA. It is necessary to **assess** and to test them in our environment to confirm or this this vision. | -   | For various reasons, these solutions present a risk or a drag to AXA. Usage is **deprecated**. It is necessary to work proactively to decommission them. |
 
 ### Technology scope
 
