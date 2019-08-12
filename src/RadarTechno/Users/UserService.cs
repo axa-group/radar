@@ -9,8 +9,8 @@ namespace RadarTechno.Users
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        private const int maxHashLength = 64;
-        private const int maxSaltLength = 128;
+        private const int MaxHashLength = 64;
+        private const int MaxSaltLength = 128;
 
         public UserService(IUserRepository userRepository)
         {
@@ -28,7 +28,7 @@ namespace RadarTechno.Users
             if (user == null ||
                 string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(password) ||
-                !VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt)
+                !VerifyPasswordHash(password, Encoding.UTF8.GetBytes(user.PasswordHash), Encoding.UTF8.GetBytes(user.PasswordSalt))
             )
             {
                 return null;
@@ -55,8 +55,8 @@ namespace RadarTechno.Users
             CreatePasswordHash(registerUser.Password, out passwordHash, out passwordSalt);
 
             var createdUser = new User(registerUser);
-            createdUser.PasswordHash = passwordHash;
-            createdUser.PasswordSalt = passwordSalt;
+            createdUser.PasswordHash = Encoding.UTF8.GetString(passwordHash);
+            createdUser.PasswordSalt = Encoding.UTF8.GetString(passwordSalt);
 
             await _userRepository.SaveAsync(createdUser);
             return createdUser;
@@ -102,11 +102,11 @@ namespace RadarTechno.Users
             {
                 throw new ArgumentException("Value cannot be empty or whitespace only string.", nameof(password));
             }
-            if (storedHash.Length != maxHashLength)
+            if (storedHash.Length != MaxHashLength)
             {
                 throw new ArgumentException("Invalid length of password hash (64 bytes expected).", "passwordHash");
             }
-            if (storedSalt.Length != maxSaltLength)
+            if (storedSalt.Length != MaxSaltLength)
             {
                 throw new ArgumentException("Invalid length of password salt (128 bytes expected).", "passwordHash");
             }
