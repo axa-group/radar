@@ -15,7 +15,7 @@ namespace RadarTechno.Users
         }
 
         [StringLength(256, MinimumLength = 2)]
-        [RegularExpression("^[a-zâãäåæçèéêëìíîïðñòóôõøùúûüýþÿiA-Z -]*$")]
+        [RegularExpression("^[a-zA-Zà-ïæù-üò-öŐ-œÿ -]*$")]
         public string Name { get; set; }
 
         [Required, EmailAddress]
