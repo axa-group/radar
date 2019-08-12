@@ -1,4 +1,4 @@
-version: '1.0'
+version: '3.3'
 
 services:
 
@@ -10,6 +10,8 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     ports:
       - 27017:27017
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
   mongo-express:
     image: mongo-express
@@ -23,7 +25,9 @@ services:
       - mongo
 
   radar:
-    build: ./src/RadarTechno/
+    build:
+      context: ./
+      dockerfile : ./src/RadarTechno/Dockerfile
     restart: always
     ports:
       - 5000:80
