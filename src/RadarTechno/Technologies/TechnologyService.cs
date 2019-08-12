@@ -11,7 +11,8 @@ namespace RadarTechno.Technologies
         public Technology SetEntityStatus(Technology technology, Entity entity,
             string referenceEntityId)
         {
-            Technology newTechnology = new Technology(technology);
+            Technology newTechnology = new Technology();
+            newTechnology.Map(technology);
             if (entity.Technologies != null && entity.Technologies.Length > 0)
             {
                 var entityTechnologiesList = new List<EntityTechnology>(entity.Technologies);
