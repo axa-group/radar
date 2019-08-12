@@ -6,16 +6,26 @@ using System.Threading.Tasks;
 
 namespace RadarTechno.Users
 {
+    
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        private const int maxHashLength = 64;
-        private const int maxSaltLength = 128;
+        private const int MaxHashLength = 64;
+        private const int MaxSaltLength = 128;
 
         public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
+        
+        public static string Base64Encode(byte[] plainTextBytes) {
+            return System.Convert.ToBase64String(plainTextBytes);
+        }
+    
+        public static byte[] Base64Decode(string base64EncodedData) {
+            return System.Convert.FromBase64String(base64EncodedData);
+        }
+
 
         public async Task<User> GetById(string id)
         {
@@ -28,7 +38,7 @@ namespace RadarTechno.Users
             if (user == null ||
                 string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(password) ||
-                !VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt)
+                !VerifyPasswordHash(password, Base64Decode(user.PasswordHash), Base64Decode(user.PasswordSalt))
             )
             {
                 return null;
@@ -50,13 +60,14 @@ namespace RadarTechno.Users
             {
                 throw new UserException("Username \"" + registerUser.Email + "\" is already taken");
             }
+            
+            var passwordHashResult = CreatePasswordHash(registerUser.Password);
 
-            byte[] passwordHash, passwordSalt;
-            CreatePasswordHash(registerUser.Password, out passwordHash, out passwordSalt);
-
-            var createdUser = new User(registerUser);
-            createdUser.PasswordHash = passwordHash;
-            createdUser.PasswordSalt = passwordSalt;
+            var createdUser = new User(registerUser)
+            {
+                PasswordHash = passwordHashResult.PasswordHash, 
+                PasswordSalt = passwordHashResult.PasswordSalt
+            };
 
             await _userRepository.SaveAsync(createdUser);
             return createdUser;
@@ -82,8 +93,9 @@ namespace RadarTechno.Users
             }
         }
 
-        private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
+        private static PasswordHashResult CreatePasswordHash(string password)
         {
+            var passwordHashResult = new PasswordHashResult();
             if (String.IsNullOrWhiteSpace(password))
             {
                 throw new ArgumentException("Value cannot be empty or whitespace only string.", nameof(password));
@@ -91,9 +103,11 @@ namespace RadarTechno.Users
             // Not an AXA standard 
             using (var hmac = new HMACSHA512())
             {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+                passwordHashResult.PasswordSalt = Base64Encode(hmac.Key);
+                passwordHashResult.PasswordHash = Base64Encode(hmac.ComputeHash(Encoding.UTF8.GetBytes(password)));
             }
+
+            return passwordHashResult;
         }
 
         private static bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
@@ -102,11 +116,11 @@ namespace RadarTechno.Users
             {
                 throw new ArgumentException("Value cannot be empty or whitespace only string.", nameof(password));
             }
-            if (storedHash.Length != maxHashLength)
+            if (storedHash.Length != MaxHashLength)
             {
                 throw new ArgumentException("Invalid length of password hash (64 bytes expected).", "passwordHash");
             }
-            if (storedSalt.Length != maxSaltLength)
+            if (storedSalt.Length != MaxSaltLength)
             {
                 throw new ArgumentException("Invalid length of password salt (128 bytes expected).", "passwordHash");
             }
@@ -122,5 +136,9 @@ namespace RadarTechno.Users
             }
             return true;
         }
+    }
+    
+    public class PasswordHashResult  {
+        public string PasswordHash, PasswordSalt;
     }
 }

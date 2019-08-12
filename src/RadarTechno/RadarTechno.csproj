@@ -16,6 +16,9 @@
 
   <PropertyGroup>
     <RuntimeFrameworkVersion>2.2.3</RuntimeFrameworkVersion>
+    <UserSecretsId>16b1df8c-e403-4752-bfc1-ac175b236814</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +26,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.6.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.3" />    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.12" />
     <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
     <PackageReference Include="NSwag.AspNetCore" Version="12.1.0" />
   </ItemGroup>
@@ -36,6 +40,7 @@
     <Content Remove="ClientApp\src\layout\**" />
     <Content Remove="ClientApp\src\stories\**" />
     <Content Remove="ClientApp\src\types\**" />
+    <Content Include="ClientApp\.env" />
     <EmbeddedResource Remove="ClientApp\src\layout\**" />
     <EmbeddedResource Remove="ClientApp\src\stories\**" />
     <EmbeddedResource Remove="ClientApp\src\types\**" />
@@ -57,21 +62,7 @@
     <TypeScriptCompile Include="ClientApp\src\Storage.ts" />
   </ItemGroup>
 
-  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
-    <!-- Ensure Node.js is installed -->
-    <Exec Command="node --version" ContinueOnError="true">
-      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
-    </Exec>
-    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
-    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-  </Target>
-
   <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
-    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
-    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build" />
-
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)build\**" />

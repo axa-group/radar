@@ -20,10 +20,16 @@ It is a great way to manage and visualize the usage of technologies.
 
 ## Getting Started
 
-- Clone the project
-- Modify the src/RadarTechno/appsettings.json and src/RadarTechno/appsettings.development.json to add your MongoDB connection string
-- Run with `sh dotnet run --project ./src/RadarTechno/RadarTechno.csproj`
-- Run storybook by going to the src/RadarTechno/ClientApp folder and executing `sh npm run storybook`
+With "Docker" :
+```sh
+git clone https://github.com/axa-group/radar
+cd radar
+docker-compose up -d 
+# then navigate to http://localhost:5000
+# login: demo@axa.from
+# password: yuNGyQ747
+# then have fun !
+```
 
 ## How does it work
 
@@ -65,7 +71,7 @@ Only the Excel, Reinforce, Assess and Deprecated technologies are displayed on t
 
 | Excel                                                                                                                                                                                              | Reinforce                                                                                                                                                             | Assess                                                                                                                                             | -   | Deprecated                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| We have capacity to use these solutions and they have already been deployed. We need to reinforce in order to **excel** on these solutions that will be massively deployed or already are critical | Assessments have demonstrated pertinance og these solutions. We have to **reinforce** their usages to relevant use cases and build a capacity on the top of it at AXA | We think these solutions may bring value to AXA. It is necessary to **assess** and to test them in our environment to confirm or this this vision. | -   | For various reasons, these solutions present a risk or a drag to AXA. Usage is **deprecated**. It is necessary to work proactively to decommission them. |
+| We have capacity to use these solutions and they have already been deployed. We need to reinforce in order to **excel** on these solutions that will be massively deployed or already are critical | Assessments have demonstrated pertinance of these solutions. We have to **reinforce** their usages to relevant use cases and build a capacity on the top of it at AXA | We think these solutions may bring value to AXA. It is necessary to **assess** and to test them in our environment to confirm or this vision. | -   | For various reasons, these solutions present a risk or a drag to AXA. Usage is **deprecated**. It is necessary to work proactively to decommission them. |
 
 ### Technology scope
 

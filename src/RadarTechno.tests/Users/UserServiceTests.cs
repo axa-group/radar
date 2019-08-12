@@ -16,7 +16,7 @@ namespace RadarTechno.tests.Users
         }
 
         private readonly Mock<IUserRepository> _mockRepository;
-
+        
         [Fact]
         public async Task GetByIdShouldReturnAUser()
         {
@@ -32,7 +32,6 @@ namespace RadarTechno.tests.Users
         [Fact]
         public async Task AuthenticateWithNullEmailShouldReturnNull()
         {
-            var userService = new UserService(_mockRepository.Object);
             var userDto = new RegisterUser("name", null, "passe", "entity", "user");
 
             var result = await new UserService(_mockRepository.Object).Authenticate(userDto.Email, userDto.Password);
@@ -43,7 +42,6 @@ namespace RadarTechno.tests.Users
         [Fact]
         public async Task AuthenticateWithoutCorrespondingUserShouldReturnNull()
         {
-            var userService = new UserService(_mockRepository.Object);
             var userDto = new RegisterUser("name", "email", "passe", "entity", "user");
             _mockRepository.Setup(m => m.FindOneByEmailAsync(It.IsAny<string>(), null))
                 .ReturnsAsync((User) null);
@@ -56,9 +54,7 @@ namespace RadarTechno.tests.Users
         [Fact]
         public async Task AuthenticateWithWrongPasswordShouldReturnAUser()
         {
-            var userService = new UserService(_mockRepository.Object);
             var userDto = new RegisterUser("name", "email", "passe", "entity", "user");
-            var user = new User(userDto);
             byte[] passwordHash, passwordSalt;
             using (var hmac = new HMACSHA512())
             {
@@ -67,8 +63,8 @@ namespace RadarTechno.tests.Users
             }
 
             var createdUser = new User(userDto);
-            createdUser.PasswordHash = passwordHash;
-            createdUser.PasswordSalt = passwordSalt;
+            createdUser.PasswordHash =  UserService.Base64Encode(passwordHash);
+            createdUser.PasswordSalt = UserService.Base64Encode(passwordSalt);
             _mockRepository.Setup(m => m.FindOneByEmailAsync(It.IsAny<string>(), null))
                 .ReturnsAsync(createdUser);
             var result = await new UserService(_mockRepository.Object).Authenticate(userDto.Email, userDto.Password);
@@ -90,8 +86,8 @@ namespace RadarTechno.tests.Users
             }
 
             var createdUser = new User(userDto);
-            createdUser.PasswordHash = passwordHash;
-            createdUser.PasswordSalt = passwordSalt;
+            createdUser.PasswordHash = UserService.Base64Encode(passwordHash);
+            createdUser.PasswordSalt = UserService.Base64Encode(passwordSalt);
             _mockRepository.Setup(m => m.FindOneByEmailAsync(It.IsAny<string>(), null))
                 .ReturnsAsync(createdUser);
             var result = await new UserService(_mockRepository.Object).Authenticate(userDto.Email, userDto.Password);
