@@ -16,6 +16,9 @@
 
   <PropertyGroup>
     <RuntimeFrameworkVersion>2.2.3</RuntimeFrameworkVersion>
+    <UserSecretsId>16b1df8c-e403-4752-bfc1-ac175b236814</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +26,7 @@
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.6.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.3" />    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.12" />
     <PackageReference Include="MongoDB.Driver" Version="2.7.3" />
     <PackageReference Include="NSwag.AspNetCore" Version="12.1.0" />
   </ItemGroup>
