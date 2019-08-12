@@ -26,18 +26,31 @@ steps:
       pad: false
 
   - task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
-    displayName: 'Prepare analysis on SonarCloud'
+    displayName: "Prepare analysis on SonarCloud"
     inputs:
-      SonarCloud: 'axa-group.radar'
-      organization: 'axa-group'
-      projectKey: 'axa-group_radar'
+      SonarCloud: "axa-group.radar"
+      organization: "axa-group"
+      projectKey: "axa-group_radar"
       projectName: radar
       extraProperties: |
-       sonar.branch.name=$(SmartBranchName)
-       sonar.exclusions=**/*.spec.ts,**/*.spec.tsx,**/*.stories.tsx,**/coverage/**,Scripts/**,**/*.scss,**/__snapshots__/**,**/*[Tt]ests.cs,**/node_modules/**,**/ClientApp/build/**,**/ClientApp/.storybook/**,**/obj/**,**/__mocks__/**,**/ClientApp/src/serviceWorker.ts
-       sonar.typescript.lcov.reportPaths=ClientApp/coverage/lcov.info
-       sonar.cs.opencover.reportsPaths=**/opencover.xml
-      condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
+        sonar.branch.name=$(SmartBranchName)
+        sonar.exclusions=**/*.spec.ts,**/*.spec.tsx,**/*.stories.tsx,**/coverage/**,Scripts/**,**/*.scss,**/__snapshots__/**,**/*[Tt]ests.cs,**/node_modules/**,**/ClientApp/build/**,**/ClientApp/.storybook/**,**/obj/**,**/__mocks__/**,**/ClientApp/src/serviceWorker.ts
+        sonar.typescript.lcov.reportPaths=ClientApp/coverage/lcov.info
+        sonar.cs.opencover.reportsPaths=**/opencover.xml
+      condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'), ne(variables['Build.Reason'], 'PullRequest'))
+
+  - task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
+    displayName: "Prepare analysis on SonarCloud"
+    inputs:
+      SonarCloud: "axa-group.radar"
+      organization: "axa-group"
+      projectKey: "axa-group_radar"
+      projectName: radar
+      extraProperties: |
+        sonar.exclusions=**/*.spec.ts,**/*.spec.tsx,**/*.stories.tsx,**/coverage/**,Scripts/**,**/*.scss,**/__snapshots__/**,**/*[Tt]ests.cs,**/node_modules/**,**/ClientApp/build/**,**/ClientApp/.storybook/**,**/obj/**,**/__mocks__/**,**/ClientApp/src/serviceWorker.ts
+        sonar.typescript.lcov.reportPaths=ClientApp/coverage/lcov.info
+        sonar.cs.opencover.reportsPaths=**/opencover.xml
+      condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'), eq(variables['Build.Reason'], 'PullRequest'))
 
   - task: Npm@1
     displayName: "npm install"
@@ -72,16 +85,16 @@ steps:
       version: 2.2.105
 
   - task: DotNetCoreCLI@2
-    displayName: 'dotnet build'
+    displayName: "dotnet build"
     inputs:
-      projects: '**/*.csproj'
+      projects: "**/*.csproj"
       arguments: '--configuration $(BuildConfiguration)"'
 
   - task: DotNetCoreCLI@2
-    displayName: 'dotnet test'
+    displayName: "dotnet test"
     inputs:
       command: test
-      projects: '**/*tests.csproj'
+      projects: "**/*tests.csproj"
       arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml"'
 
   - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
