@@ -12,7 +12,7 @@ db.entities.insert({
     "__v": 0
 });
 db.users.insert({
-    "_id": ObjectID("5d5187c95d0af00006e8c77a"),
+    "_id": ObjectId("5d5187c95d0af00006e8c77a"),
     "name": "demo",
     "email": "demo@axa.fr",
     "entityList": [
@@ -23,4 +23,15 @@ db.users.insert({
     "passwordSalt": "gI3yLJLCttMWzkHJ2D3fKIMMKIsoYzsSreTTgEW7dyHZJV30hExJ7fcewPrWmZGHtZ6KjcCLjOwondHj2bsMOSGtLWRsf7y89IILp0foBKZAc8EkQk+JlZ6VBa0ERY5mCYHkZ7EhOPRcx6dd5v3CW08fLsjwOpmCg6IU0l4THCk=",
     "provider": null,
     "__v": 0
+});
+db.techno.insert({
+    "_id": ObjectId("5d527d8f13de705049bc298c"),
+    "__v": 1,
+    "name": "dotnetcore",
+    "key": "dotnetcore",
+    "category": "frameworks",
+    "description": "awesome",
+    "scope": "",
+    "reporter": null,
+    "updateDate": null
 });
