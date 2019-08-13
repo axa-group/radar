@@ -40,6 +40,7 @@
     <Content Remove="ClientApp\src\layout\**" />
     <Content Remove="ClientApp\src\stories\**" />
     <Content Remove="ClientApp\src\types\**" />
+    <Content Include="ClientApp\.env" />
     <EmbeddedResource Remove="ClientApp\src\layout\**" />
     <EmbeddedResource Remove="ClientApp\src\stories\**" />
     <EmbeddedResource Remove="ClientApp\src\types\**" />

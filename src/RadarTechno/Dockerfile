@@ -16,7 +16,7 @@ WORKDIR "/src/src/RadarTechno/ClientApp"
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update
 RUN apt-get install -y build-essential nodejs
-#RUN npm install -g npm
+RUN npm install npm@latest -g
 RUN npm install
 RUN npm run build
 
