@@ -58,7 +58,7 @@ namespace RadarTechno.Users
         [BsonElement("passwordSalt")]
         [JsonIgnore]
         public string PasswordSalt { get; set; }
-
+        
         [BsonElement("provider")] public string Provider { get; set; }
 
         [BsonElement("__v")] public int Version { get; set; } = 0;

@@ -79,7 +79,8 @@ namespace RadarTechno
                                 context.HttpContext.RequestServices.GetRequiredService<IUserRepository>();
                             var userId = context.Principal.Identity.Name;
                             var user = userRepository.FindByIdAsync(userId);
-                            if (user == null)
+                            user.Wait();
+                            if (user.Result == null)
                             {
                                 context.Fail("Unauthorized");
                             }

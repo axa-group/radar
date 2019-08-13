@@ -17,6 +17,16 @@ namespace RadarTechno.tests.Users
 
         private readonly Mock<IUserRepository> _mockRepository;
 
+        
+        [Fact]
+        public async Task GetByIdShouldReturnAUser1()
+        {
+            string youhou = "kIPCgx1d5RrLUFpkRV/4d885dMBXCJc+hgXNgrKNfT62K8p0FyfLC9bY6b9F2KNYA8dyMmMAgGCqMSLScvuKpg==";
+            var result =UserService.Base64Decode(youhou);
+            Assert.Equal(result.Length, 60);
+        }
+        
+        
         [Fact]
         public async Task GetByIdShouldReturnAUser()
         {
