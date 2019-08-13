@@ -1,7 +1,7 @@
 
 db.auth('root', 'example');
-db.getSiblingDB('radar-techno');
-db.entities.insert({
+radarDb = db.getSiblingDB('radar-techno');
+radarDb.entities.insert({
     "_id": ObjectId("5d5188985d0af00006e8c77e"),
     "name": "AXA France",
     "adminList": [
@@ -11,7 +11,7 @@ db.entities.insert({
     "workflowUrl": "",
     "__v": 0
 });
-db.users.insert({
+radarDb.users.insert({
     "_id": ObjectId("5d5187c95d0af00006e8c77a"),
     "name": "demo",
     "email": "demo@axa.fr",
@@ -24,13 +24,13 @@ db.users.insert({
     "provider": null,
     "__v": 0
 });
-db.techno.insert({
+radarDb.technos.insert({
     "_id": ObjectId("5d527d8f13de705049bc298c"),
     "__v": 1,
     "name": "dotnetcore",
     "key": "dotnetcore",
     "category": "frameworks",
-    "description": "awesome",
+    "description": "3.0 is awesome",
     "scope": "",
     "reporter": null,
     "updateDate": null
