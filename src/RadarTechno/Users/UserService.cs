@@ -18,11 +18,11 @@ namespace RadarTechno.Users
             _userRepository = userRepository;
         }
 
-        private static string Base64Encode(byte[] plainTextBytes) {
+        public static string Base64Encode(byte[] plainTextBytes) {
             return System.Convert.ToBase64String(plainTextBytes);
         }
 
-        private static byte[] Base64Decode(string base64EncodedData) {
+        public static byte[] Base64Decode(string base64EncodedData) {
             return System.Convert.FromBase64String(base64EncodedData);
         }
 
