@@ -8,7 +8,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
-      MONGO_INITDB_DATABASE: radar-techno
+      MONGO_INITDB_DATABASE: radar
     ports:
       - 27017:27017
     volumes:
@@ -32,10 +32,8 @@ services:
     restart: always
     ports:
       - 5000:80
-      - 5001:44319
     environment:
-      ASPNETCORE_URLS: https://+:443;http://+:80
-      ASPNETCORE_HTTPS_PORT: 44319
+      ASPNETCORE_ENVIRONMENT: Development
       MongoDB__Host: mongo
     depends_on:
       - mongo

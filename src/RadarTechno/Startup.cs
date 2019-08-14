@@ -149,13 +149,13 @@ namespace RadarTechno
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
+                app.UseHttpsRedirection();
             }
+            
+            app.UseStaticFiles();
             // Set up custom content types - associating file extension to MIME type
             var provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".json"] = "application/json";
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseSpaStaticFiles(new StaticFileOptions()
             {
                 ContentTypeProvider = provider
