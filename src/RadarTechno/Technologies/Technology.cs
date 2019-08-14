@@ -59,6 +59,10 @@ namespace RadarTechno.Technologies
         [BsonDateTimeOptions]
         public DateTime UpdateDate { get; set; } = DateTime.Now;
 
+        public Technology()
+        {
+            
+        }
         public Technology(string name, string key, string category, string description, string scope)
         {
             Name = name;
@@ -69,20 +73,25 @@ namespace RadarTechno.Technologies
             EntitiesStatus = new List<EntityStatus>();
         }
 
-        public Technology(Technology technology)
+    }
+
+    public static class TechnologyExtention
+    {
+        
+        public static void Map(this Technology technology, Technology input )
         {
-            Id = technology.Id;
-            InternalId = technology.InternalId;
-            Version = technology.Version;
-            Name = technology.Name;
-            Key = technology.Key;
-            Category = technology.Category;
-            Description = technology.Description;
-            Reporter = technology.Reporter;
-            Scope = technology.Scope;
-            EntitiesStatus = technology.EntitiesStatus;
-            GroupStatus = technology.GroupStatus;
-            UpdateDate = technology.UpdateDate;
+            technology.Id = input.Id;
+            technology.InternalId = input.InternalId;
+            technology.Version = input.Version;
+            technology.Name = input.Name;
+            technology.Key = input.Key;
+            technology.Category = input.Category;
+            technology.Description = input.Description;
+            technology.Reporter = input.Reporter;
+            technology.Scope = input.Scope;
+            technology.EntitiesStatus = input.EntitiesStatus;
+            technology.GroupStatus = input.GroupStatus;
+            technology.UpdateDate = input.UpdateDate;
         }
     }
 }

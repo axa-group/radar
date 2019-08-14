@@ -77,14 +77,14 @@ export const DataTable = ({
           </Table.Tr>
         </Table.Header>
         <Table.Body>
-          {items.length === 0 && (
+          {(!Array.isArray(items) || items.length === 0) && (
             <Table.Tr>
               <Table.Td className="af-table--empty" colSpan={keys.length + 1}>
                 <div>The list is empty</div>
               </Table.Td>
             </Table.Tr>            
           )}
-          {items.map((item, index) => (
+          {Array.isArray(items) && items.map((item, index) => (
             <Table.Tr key={`item_${index}`}>
               {keys.map(k => (
                 <Table.Td key={`item_${index}_${k}`}>

@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NJsonSchema;
 using NSwag.AspNetCore;
@@ -48,7 +49,7 @@ namespace RadarTechno
                 var split = connectionStringForNode.Split('/');
                 var database = split[split.Length-1];
                 options.ConnectionString = connectionStringForNode.Replace($"/{database}", "");
-                options.Database = database.Split('?')[0]; //Configuration.GetSection("Connection:Database").Value;
+                options.Database = database.Split('?')[0];
             });
             
             services.AddHsts(options =>
@@ -79,7 +80,8 @@ namespace RadarTechno
                                 context.HttpContext.RequestServices.GetRequiredService<IUserRepository>();
                             var userId = context.Principal.Identity.Name;
                             var user = userRepository.FindByIdAsync(userId);
-                            if (user == null)
+                            user.Wait();
+                            if (user.Result == null)
                             {
                                 context.Fail("Unauthorized");
                             }
@@ -146,15 +148,19 @@ namespace RadarTechno
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
+                var appSettings = serviceProvider.GetService<IOptions<AppSettings>>();
+                if (appSettings.Value.HttpsOnly)
+                {
+                    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                    app.UseHsts();
+                    app.UseHttpsRedirection();
+                }
             }
+            
+            app.UseStaticFiles();
             // Set up custom content types - associating file extension to MIME type
             var provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".json"] = "application/json";
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseSpaStaticFiles(new StaticFileOptions()
             {
                 ContentTypeProvider = provider

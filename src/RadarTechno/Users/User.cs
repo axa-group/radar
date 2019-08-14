@@ -53,12 +53,12 @@ namespace RadarTechno.Users
 
         [BsonElement("passwordHash")]
         [JsonIgnore]
-        public byte[] PasswordHash { get; set; }
+        public string PasswordHash { get; set; }
 
         [BsonElement("passwordSalt")]
         [JsonIgnore]
-        public byte[] PasswordSalt { get; set; }
-
+        public string PasswordSalt { get; set; }
+        
         [BsonElement("provider")] public string Provider { get; set; }
 
         [BsonElement("__v")] public int Version { get; set; } = 0;

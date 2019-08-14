@@ -8,5 +8,7 @@ namespace RadarTechno
     public class AppSettings
     {
         public string Secret { get; set; }
+        
+        public bool HttpsOnly { get; set; }
     }
 }

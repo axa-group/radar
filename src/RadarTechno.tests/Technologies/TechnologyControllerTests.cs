@@ -50,7 +50,14 @@ namespace RadarTechno.tests.Technologies
                 }
             };
             _controller.ControllerContext = context;
-            var technology = new Technology(null, null, "Languages and Frameworks", "", "");
+            var technology = new TechnologyInput()
+            {
+                Category =  "Languages and Frameworks" ,
+                Description = "",
+                Name = "",
+                Key = "c++",
+                Scope = ""
+            };
 
             var result = await _controller.CreateTechnology(_mockRepository.Object, mockQueue.Object, technology);
 
@@ -73,7 +80,14 @@ namespace RadarTechno.tests.Technologies
                 }
             };
             _controller.ControllerContext = context;
-            var technology = new Technology("C++", "c++", "Languages and Frameworks", "", "");
+            var technology = new TechnologyInput()
+            {
+                Category =  "Languages and Frameworks" ,
+                Description = "",
+                Name = "C++",
+                Key = "c++",
+                Scope = ""
+            };
             
             await _controller.CreateTechnology(_mockRepository.Object, mockQueue.Object, technology);
 
@@ -97,7 +111,14 @@ namespace RadarTechno.tests.Technologies
                 }
             };
             _controller.ControllerContext = context;
-            var technology = new Technology("C++", "c++", "Languages and Frameworks", "", "");
+            var technology = new TechnologyInput()
+            {
+                Category =  "Languages and Frameworks" ,
+                Description = "",
+                Name = "C++",
+                Key = "c++",
+                Scope = ""
+            };
             _mockRepository.Setup(m => m.SaveAsync(It.IsAny<Technology>()))
                 .ThrowsAsync(new ArgumentException("exception"));
 

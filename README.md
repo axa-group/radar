@@ -20,10 +20,16 @@ It is a great way to manage and visualize the usage of technologies.
 
 ## Getting Started
 
-- Clone the project
-- Modify the src/RadarTechno/appsettings.json and src/RadarTechno/appsettings.development.json to add your MongoDB connection string
-- Run with `sh dotnet run --project ./src/RadarTechno/RadarTechno.csproj`
-- Run storybook by going to the src/RadarTechno/ClientApp folder and executing `sh npm run storybook`
+With "Docker" :
+```sh
+git clone https://github.com/axa-group/radar
+cd radar
+docker-compose up -d 
+# then navigate to http://localhost:5000
+# login: demo@axa.from
+# password: yuNGyQ747
+# then have fun !
+```
 
 ## How does it work
 

@@ -53,10 +53,9 @@ namespace RadarTechno.Technologies
                 var referenceEntityId = configuration.GetSection("ReferenceEntityId");
                 foreach (var technology in result)
                 {
-                    var technologyToAdd = new Technology(technology)
-                    {
-                        EntitiesStatus = new List<EntityStatus>()
-                    };
+                    var technologyToAdd = new Technology();
+                    technologyToAdd.Map(technology);
+                    technologyToAdd.EntitiesStatus = new List<EntityStatus>();
                     foreach (var entity in entities)
                     {
                         technologyToAdd = technologyService.SetEntityStatus(technologyToAdd, entity, referenceEntityId.Value);
@@ -108,24 +107,36 @@ namespace RadarTechno.Technologies
             ));
             return NoContent();
         }
-
+        
         [HttpPost]
         public async Task<IActionResult> CreateTechnology(
             [FromServices] ITechnologyRepository technologyRepository,
             [FromServices] IQueue queue,
-            Technology technology)
+            TechnologyInput input)
         {
             var user = HttpContext.User;
             if (!user.IsInRole("root"))
             {
                 return Unauthorized();
             }
-            if (!_validation.Validate(technology))
+            if (!_validation.Validate(input))
             {
                 return BadRequest();
             }
             try
             {
+                var technology = new Technology()
+                {
+                    Version = input.Version,
+                    Name = input.Name,
+                    Key = input.Key,
+                    Category = input.Category,
+                    Description = input.Description,
+                    Reporter = input.Reporter,
+                    Scope = input.Scope,
+                    UpdateDate = input.UpdateDate
+                };
+                
                 await technologyRepository.SaveAsync(technology);
 
                 var author = user.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name).Value;
@@ -142,7 +153,7 @@ namespace RadarTechno.Technologies
             {
                 if(exception.WriteError.Category == ServerErrorCategory.DuplicateKey)
                 {
-                    return Conflict(new {message = $"Duplicate entry for technology {technology.Name}"});
+                    return Conflict(new {message = $"Duplicate entry for technology {input.Name}"});
                 }
 
                 return BadRequest();
