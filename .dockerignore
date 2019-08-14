@@ -18,3 +18,4 @@
 **/values.dev.yaml
 **/.toolstarget
 **/global.json
+**/node_modules

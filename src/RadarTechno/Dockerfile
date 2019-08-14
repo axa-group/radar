@@ -13,8 +13,8 @@ WORKDIR "/src/src/RadarTechno"
 RUN dotnet build "RadarTechno.csproj" -c Release -o /app
 WORKDIR "/src/src/RadarTechno/ClientApp"
 # Install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y build-essential nodejs
 RUN npm install npm@latest -g
 RUN rm -r node_modules
