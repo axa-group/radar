@@ -20,7 +20,6 @@ RUN npm install npm@latest -g
 RUN npm cache clean --force
 RUN npm install
 RUN npm run build
-RUN dotnet dev-certs https
 
 WORKDIR "/src/src/RadarTechno"
 FROM build AS publish
