@@ -17,12 +17,12 @@ namespace RadarTechno.Users
         {
             _userRepository = userRepository;
         }
-        
-        public static string Base64Encode(byte[] plainTextBytes) {
+
+        private static string Base64Encode(byte[] plainTextBytes) {
             return System.Convert.ToBase64String(plainTextBytes);
         }
-    
-        public static byte[] Base64Decode(string base64EncodedData) {
+
+        private static byte[] Base64Decode(string base64EncodedData) {
             return System.Convert.FromBase64String(base64EncodedData);
         }
 
@@ -139,6 +139,7 @@ namespace RadarTechno.Users
     }
     
     public class PasswordHashResult  {
-        public string PasswordHash, PasswordSalt;
+        public string PasswordHash { get; set; }
+        public string PasswordSalt { get; set; }
     }
 }
