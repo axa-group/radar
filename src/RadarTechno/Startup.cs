@@ -49,7 +49,7 @@ namespace RadarTechno
                 var split = connectionStringForNode.Split('/');
                 var database = split[split.Length-1];
                 options.ConnectionString = connectionStringForNode.Replace($"/{database}", "");
-                options.Database = database.Split('?')[0]; //Configuration.GetSection("Connection:Database").Value;
+                options.Database = database.Split('?')[0];
             });
             
             services.AddHsts(options =>

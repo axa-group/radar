@@ -33,8 +33,8 @@ services:
     ports:
       - 5000:80
     environment:
-      ASPNETCORE_ENVIRONMENT: Production
       MongoDB__Host: mongo
+      ASPNETCORE_ENVIRONMENT: Docker
     depends_on:
       - mongo
 

@@ -7,7 +7,18 @@ radarDb.entities.insert({
     "adminList": [
         "demo@axa.fr"
     ],
-    "technologies": [],
+    "technologies": [{
+        "technology": ObjectId("5d527d8f13de705049bc298c"),
+        "status": "Reinforce",
+        "scope": "",
+        "entityTechnologyUrls": [
+            {
+                "label": "why-choose-dotnet",
+                "url": "https://dotnet.microsoft.com/platform/why-choose-dotnet"
+            }
+        ],
+        "_id": ObjectId("5d53d99b87af9d0c8e68ea97")
+    }],
     "workflowUrl": "",
     "__v": 0
 });
@@ -33,5 +44,5 @@ radarDb.technos.insert({
     "description": "3.0 is awesome",
     "scope": "",
     "reporter": null,
-    "updateDate": null
+    "updateDate": new Date()
 });

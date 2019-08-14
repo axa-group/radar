@@ -1,7 +1,7 @@
 import { IEntity, IPopulatedEntityTechnology } from './Entity';
 
 export const formatEntityTechnology = (items: IPopulatedEntityTechnology[]) => (
-  items.map((entityTechnology: IPopulatedEntityTechnology) => {
+  Array.isArray(items) ? items.map((entityTechnology: IPopulatedEntityTechnology) => {
     return {
       ...entityTechnology.technology,
       id: entityTechnology.id,
@@ -11,15 +11,15 @@ export const formatEntityTechnology = (items: IPopulatedEntityTechnology[]) => (
       entityTechnologyUrls: entityTechnology.entityTechnologyUrls,
       technologyId: entityTechnology.technology.id
     };
-  })
+  }) : []
 );
 
 export const formatEntity = (items: IEntity[]) => (
-  items.map((entity: IEntity) => {
+    Array.isArray(items) ? items.map((entity: IEntity) => {
     return {
       ...entity,
       numberOfTechnologies: entity.technologies ? entity.technologies.length : 0,
       admins: entity.adminList ? entity.adminList.toString() : '',
     };
-  })
+  }): []
 );

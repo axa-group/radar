@@ -10,7 +10,7 @@ export const rulesMinLength = (minLength = 2) => {
   return {
     minLength: {
       minLength,
-      message: "This field should have at least {maxLength} characters"
+      message: `This field should have at least ${minLength} characters`
     }
   };
 };
@@ -19,7 +19,7 @@ export const rulesMaxLength = (maxLength = 256) => {
   return {
     maxLength: {
       maxLength,
-      message: "This field should have les than {maxLength} characters"
+      message: `This field should have less than ${maxLength} characters`
     }
   };
 };
