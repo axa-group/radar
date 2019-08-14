@@ -17,7 +17,6 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update
 RUN apt-get install -y build-essential nodejs
 RUN npm install npm@latest -g
-#RUN rm package-lock.json
 RUN rm -r node_modules
 RUN npm uninstall
 RUN npm cache clean --force
