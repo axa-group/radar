@@ -26,7 +26,7 @@ git clone https://github.com/axa-group/radar
 cd radar
 docker-compose up -d 
 # then navigate to http://localhost:5000
-# login: demo@axa.from
+# login: demo@axa.fr
 # password: yuNGyQ747
 # then have fun !
 ```
