@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@axa-fr/react-toolkit-all": "^1.2.0",
+    "@axa-fr/react-toolkit-all": "^1.2.13",
     "@babel/polyfill": "^7.4.4",
     "@types/react-dom": "16.8.2",
     "luxon": "^1.12.1",
