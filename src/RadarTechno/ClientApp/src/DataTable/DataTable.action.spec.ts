@@ -219,4 +219,23 @@ describe('dataTable action test', () => {
     expect(tablePaging).toEqual(state.paging);
     expect(numberPages).toEqual(1);
   });
+
+  test('filterTableItems with item missing the filter key returns empty result', () => {
+    const items = [{
+      updateDate:'2018-08-23T14:41:36.328Z',
+      id:'5823926b69170e15d895fda8',
+      version:0,
+      category:'frameworks',
+      name:'Node.JS2',
+      scope:'',
+      key:'node.js2',
+    }];
+    state.paging = {numberItems: 0, page: 1};
+    state.sort = {sortBy: 'unknown', reverse: false};
+    state.filters = {'unknown': 'key'};
+    const {tableItems, tablePaging, numberPages} = filterTableItems(items, state);
+    expect(tableItems).toEqual([]);
+    expect(tablePaging).toEqual(state.paging);
+    expect(numberPages).toEqual(1);
+  });
 });
