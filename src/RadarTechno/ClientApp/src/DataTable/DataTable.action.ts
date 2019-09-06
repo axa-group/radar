@@ -57,10 +57,10 @@ export const filterTableItems = (items: object[], state: IState) => {
       if(state.filters[key] && state.filters[key] !== '') {
         tableItems = tableItems.filter(item =>
           item[key] != null && 
-            (item[key].toString().toLowerCase().replace(/\s/g, '')
+            ((item[key].toString().toLowerCase().replace(/\s/g, '')
               .includes(state.filters[key].toString().toLowerCase().replace(/\s/g, '-')))
             || (item[key].toString().toLowerCase()
-              .includes(state.filters[key].toString().toLowerCase()))
+              .includes(state.filters[key].toString().toLowerCase())))
         );
       }
     });
