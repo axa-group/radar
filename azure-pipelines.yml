@@ -79,7 +79,7 @@ steps:
     displayName: "dotnet build"
     inputs:
       projects: "**/*.csproj"
-      arguments: '--configuration $(BuildConfiguration)"'
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(GitVersion.NuGetVersion);AssemblyVersion=$(GitVersion.NuGetVersion)'
 
   - task: DotNetCoreCLI@2
     displayName: "dotnet test"
@@ -101,7 +101,7 @@ steps:
     inputs:
       command: publish
       publishWebProjects: True
-      arguments: "--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -f netcoreapp2.2 "
+      arguments: "--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -f netcoreapp2.2 /p:Version=$(GitVersion.NuGetVersion);AssemblyVersion=$(GitVersion.NuGetVersion)"
       zipAfterPublish: True
 
   - task: PublishBuildArtifacts@1
