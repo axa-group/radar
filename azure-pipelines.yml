@@ -96,6 +96,7 @@ steps:
     inputs:
       workingDir: ''
       verbose: false
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
 
   - script: |
       git config --global user.email "build-ci@axa.fr"
