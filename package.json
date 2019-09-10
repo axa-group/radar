@@ -1,0 +1,30 @@
+{
+  "name": "radar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "changelog": "auto-changelog --unreleased --commit-limit false --template changelog-template.hbs -p  --output ./CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axa-group/radar.git"
+  },
+  "keywords": [
+    "radar"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axa-group/radar/issues"
+  },
+  "homepage": "https://github.com/axa-group/radar#readme",
+  "devDependencies": {
+    "auto-changelog": "^1.16.1",
+    "twit": "^2.2.11"
+  }
+}
