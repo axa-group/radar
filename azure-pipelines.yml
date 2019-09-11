@@ -69,12 +69,12 @@ steps:
     displayName: "Use .NET Core sdk 2.2.105"
     inputs:
       version: 2.2.105
-
+      
   - task: DotNetCoreCLI@2
     displayName: "dotnet build"
     inputs:
       projects: "**/*.csproj"
-      arguments: '--configuration $(BuildConfiguration)"'
+      arguments: '--configuration $(BuildConfiguration)'
 
   - task: DotNetCoreCLI@2
     displayName: "dotnet test"
@@ -82,7 +82,7 @@ steps:
       command: test
       projects: "**/*tests.csproj"
       arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml"'
-
+      
   - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
     displayName: "Run Code Analysis"
     condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
@@ -91,15 +91,50 @@ steps:
     displayName: "Publish Quality Gate Result"
     condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
 
+  - task: Npm@1
+    displayName: "npm install"
+    inputs:
+      workingDir: ''
+      verbose: false
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+
+  - script: |
+      git config --global user.email "build-ci@axa.fr"
+      git config --global user.name "Build-CI"
+      git reset --hard
+      git remote set-url origin https://$(Github.Token)@github.com/axa-group/radar.git
+      git checkout $(SmartBranchName)
+      git status
+    displayName: 'configuration'
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+
+  - script: npm version $(App.Version)
+    displayName: ' npm version $(App.Version)'
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    
+  - script: node ./scripts/publish-changelog.js $(Github.Token)
+    displayName: 'push changelog'
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+
+  - task: GitVersion@5
+    inputs:
+      runtime: 'core'
+      updateAssemblyInfo: true
+
   - task: DotNetCoreCLI@2
     displayName: Publish
     inputs:
       command: publish
       publishWebProjects: True
-      arguments: "--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -f netcoreapp2.2 "
+      arguments: "--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -f netcoreapp2.2 /p:AssemblyVersion=$(GitVersion.AssemblySemVer)"
       zipAfterPublish: True
 
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: $(Build.DefinitionName)-Artifact"
     inputs:
       ArtifactName: "$(Build.DefinitionName)-Artifact"
+      
+  - script: node ./scripts/twitter.js $(Twitter.consumer_key) $(Twitter.consumer_secret) $(Twitter.access_token) $(Twitter.access_token_secret)
+    displayName: 'Auto tweet'
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    
