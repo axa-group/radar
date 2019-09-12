@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		package.json = package.json
 		scripts\publish-changelog.js = scripts\publish-changelog.js
 		scripts\twitter.js = scripts\twitter.js
+		GitVersion.yml = GitVersion.yml
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadarTechno", "src\RadarTechno\RadarTechno.csproj", "{0CB4997E-F08C-4F8B-9B03-6874417E8120}"
