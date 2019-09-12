@@ -96,7 +96,7 @@ steps:
     inputs:
       workingDir: ''
       verbose: false
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - script: |
       git config --global user.email "build-ci@axa.fr"
@@ -106,17 +106,17 @@ steps:
       git checkout $(SmartBranchName)
       git status
     displayName: 'configuration'
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - script: |
       npm version $(App.Version)
       git push --tags
     displayName: ' npm version $(App.Version)'
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
     
   - script: node ./scripts/publish-changelog.js $(Github.Token)
     displayName: 'push changelog'
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: GitVersion@5
     inputs:
@@ -138,5 +138,5 @@ steps:
       
   - script: node ./scripts/twitter.js $(Twitter.consumer_key) $(Twitter.consumer_secret) $(Twitter.access_token) $(Twitter.access_token_secret)
     displayName: 'Auto tweet'
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'))
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
     
