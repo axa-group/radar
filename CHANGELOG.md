@@ -1,6 +1,11 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
+#### [v1.0.4](https://github.com/axa-group/radar/compare/v1.0.3...v1.0.4)
+> 12 September 2019
+- fix(publish) pipeline [`#55`](https://github.com/axa-group/radar/pull/55) by Guillaume Chervet
+- docs(changelog) update to new 1.0.3 [`34da095`](https://github.com/axa-group/radar/commit/34da09527f84e920d065f3d0ef44d52c5f0ec464) by Build-CI 
+
 #### [v1.0.3](https://github.com/axa-group/radar/compare/v1.0.2...v1.0.3)
 > 12 September 2019
 - fix(publish) change GitVersion mode [`#54`](https://github.com/axa-group/radar/pull/54) by Guillaume Chervet
