@@ -108,7 +108,9 @@ steps:
     displayName: 'configuration'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'))
 
-  - script: npm version $(App.Version)
+  - script: |
+      npm version $(App.Version)
+      git push --tags
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'))
     
