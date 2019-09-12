@@ -113,15 +113,15 @@ steps:
       git push --tags
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
-    
-  - script: node ./scripts/publish-changelog.js $(Github.Token)
-    displayName: 'push changelog'
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: GitVersion@5
     inputs:
       runtime: 'core'
       updateAssemblyInfo: true
+  
+  - script: node ./scripts/publish-changelog.js $(Github.Token)
+    displayName: 'push changelog'
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: DotNetCoreCLI@2
     displayName: Publish
