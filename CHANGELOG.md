@@ -1,8 +1,9 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
-#### v1.0.1
+#### v1.0.2
 > 12 September 2019
+- fix(publish) add tag push [`#53`](https://github.com/axa-group/radar/pull/53) by Guillaume Chervet
 - fix(publish) missing npm package [`#52`](https://github.com/axa-group/radar/pull/52) by Guillaume Chervet
 - chore(azure-pipelines) Update azure-pipelines.yml for Azure Pipelines [`#51`](https://github.com/axa-group/radar/pull/51) by Guillaume Chervet
 - fix(table) fixed filterTableItems crash [`#50`](https://github.com/axa-group/radar/pull/50) by Arnaud Bernard
@@ -28,3 +29,4 @@ All notable changes to this project will be documented in this file.
 - first commit to open source the radar [`1a2330f`](https://github.com/axa-group/radar/commit/1a2330f7cacd6bdaf491bc420f89ac93d1357eb8) by Arnaud Bernard 
 - chore(docker) add docker-compose for developers [`e212a8f`](https://github.com/axa-group/radar/commit/e212a8f1044edc1f223b35d8e13326ab6a80b2c0) by Guillaume Chervet 
 - fix(rule) firstname (#24) [`ae8eeb7`](https://github.com/axa-group/radar/commit/ae8eeb7a4e1d657ecb16ba03c102171f3d1e79c2) by Guillaume Chervet 
+- docs(changelog) update to new 1.0.1 [`14bf775`](https://github.com/axa-group/radar/commit/14bf77511c29eab6a8f428722e3a7a39005880ac) by Build-CI 
