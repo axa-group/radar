@@ -25,6 +25,7 @@
   "homepage": "https://github.com/axa-group/radar#readme",
   "devDependencies": {
     "auto-changelog": "^1.16.1",
+    "fs-extra": "^8.1.0",
     "twit": "^2.2.11"
   }
 }
