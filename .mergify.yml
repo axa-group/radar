@@ -7,17 +7,3 @@ pull_request_rules:
     actions:
       merge:
         method: squash
-  - name: merge pull requests from dependabot[bot] if CI passes
-    conditions:
-      - author=dependabot[bot]
-      - status-success=axa-group.radar
-    actions:
-      merge:
-        method: squash
-  - name: merge pull requests from dependabot-preview[bot] if CI passes
-    conditions:
-      - author=dependabot-preview[bot]
-      - status-success=axa-group.radar
-    actions:
-      merge:
-        method: squash
