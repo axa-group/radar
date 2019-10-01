@@ -8,6 +8,7 @@ import Footer from '../Footer';
 import { EnhancedHeader } from '../Header';
 import Routes from '../Routes';
 import { ThemeProvider } from '../Theme/Theme.provider';
+import { ConfigurationProvider } from '../../Configuration';
 
 import '../Theme/Colors.scss';
 import './App.scss';
@@ -22,7 +23,9 @@ const App = () => {
               <EnhancedHeader />
               <EnhancedMenu />
               <Routes />
-              <Footer />
+              <ConfigurationProvider>
+                   <Footer />
+              </ConfigurationProvider>
             </>
           </UserProvider>
         </EnvironmentProvider>

@@ -1,1 +1,4 @@
-export { EnvironmentContext, EnvironmentProvider } from './Environment.provider';
+export {
+  EnvironmentContext,
+  EnvironmentProvider
+} from "./Environment.provider";

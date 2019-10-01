@@ -12,6 +12,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject />
     <ProjectGuid>{ED5866F0-C930-4579-B69A-D425637E2C71}</ProjectGuid>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
   </PropertyGroup>
 
   <PropertyGroup>
