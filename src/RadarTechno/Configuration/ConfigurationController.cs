@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace RadarTechno.History
+namespace RadarTechno.Configuration
 {
     [Route("api/configuration")]
     public class ConfigurationController : Controller
