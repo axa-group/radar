@@ -1,6 +1,6 @@
-import Footer from './Footer';
 import React, { useContext } from 'react';
 import { ConfigurationContext } from '../../Configuration';
+import Footer from './Footer';
 import './Footer.scss';
 
 

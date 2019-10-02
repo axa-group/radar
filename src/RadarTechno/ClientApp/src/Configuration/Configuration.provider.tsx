@@ -5,10 +5,10 @@ import { getConfigurationAsync } from './Configuration.service';
 
 export const ConfigurationContext = createContext(null);
 
-export const useConfigurationPure = (useState, useEffect, getConfigurationAsync) => ()  =>  {
-    const [state, setState] = useState({ configuration: { version: null, loading: true }});
-    useEffect(() => {
-        getConfigurationAsync().then(data => {
+export const useConfigurationPure = (iUseState, iUseEffect, iGetConfigurationAsync) => ()  =>  {
+    const [state, setState] = iUseState({ configuration: { version: null, loading: true }});
+    iUseEffect(() => {
+        iGetConfigurationAsync().then(data => {
             setState({ configuration: { version: data.version, loading: false } });
         });
     }, []);
