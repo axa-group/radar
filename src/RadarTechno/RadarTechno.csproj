@@ -50,6 +50,7 @@
     <None Remove="ClientApp\src\stories\**" />
     <None Remove="ClientApp\src\types\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    <None Include="ClientApp\src\Configuration\Configuration.provider.spec.ts" />
   </ItemGroup>
 
   <ItemGroup>

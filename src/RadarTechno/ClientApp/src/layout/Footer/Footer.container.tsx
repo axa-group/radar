@@ -1,4 +1,4 @@
-import { Footer } from '@axa-fr/react-toolkit-all';
+import Footer from './Footer';
 import React, { useContext } from 'react';
 import { ConfigurationContext } from '../../Configuration';
 import './Footer.scss';
