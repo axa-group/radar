@@ -1,27 +1,6 @@
 
 db.auth('root', 'example');
 radarDb = db.getSiblingDB('radar');
-radarDb.entities.insert({
-    "_id": ObjectId("5d5188985d0af00006e8c77e"),
-    "name": "AXA France",
-    "adminList": [
-        "demo@axa.fr"
-    ],
-    "technologies": [{
-        "technology": ObjectId("5d527d8f13de705049bc298c"),
-        "status": "Reinforce",
-        "scope": "",
-        "entityTechnologyUrls": [
-            {
-                "label": "why-choose-dotnet",
-                "url": "https://dotnet.microsoft.com/platform/why-choose-dotnet"
-            }
-        ],
-        "_id": ObjectId("5d53d99b87af9d0c8e68ea97")
-    }],
-    "workflowUrl": "",
-    "__v": 0
-});
 radarDb.entities.insert({ 
     "_id": ObjectId("5d5188985d0af00006e8c77e"),
     "name":"AXA France",
