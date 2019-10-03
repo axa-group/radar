@@ -98,7 +98,7 @@ namespace RadarTechno.Entities
                 throw new ArgumentException("Invalid technology id");
             }
             var technologies = entity.Technologies;
-            if (technologies.Length > 0)
+            if (technologies != null && technologies.Length > 0)
             {
                 if (technologies.Any(t => t.TechnologyId == entityTechnology.TechnologyId))
                     throw new ArgumentException("This technology is already in your entity");
