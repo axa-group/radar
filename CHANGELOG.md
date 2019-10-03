@@ -1,6 +1,26 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
+#### [v1.0.5](https://github.com/axa-group/radar/compare/v1.0.4...v1.0.5)
+> 3 October 2019
+- fix(entity) fixed bug in add technology [`#89`](https://github.com/axa-group/radar/pull/89) by Arnaud Bernard
+- chore(init) added data to init [`#86`](https://github.com/axa-group/radar/pull/86) by Arnaud Bernard
+- feat(doc) update licence [`#76`](https://github.com/axa-group/radar/pull/76) by Guillaume Chervet
+- chore(deps): bump monaco-editor in /src/RadarTechno/ClientApp [`#62`](https://github.com/axa-group/radar/pull/62) by dependabot-preview[bot]
+- chore(deps-dev): bump @storybook/react in /src/RadarTechno/ClientApp [`#58`](https://github.com/axa-group/radar/pull/58) by dependabot-preview[bot]
+- chore(deps): [security] bump mixin-deep in /src/RadarTechno/ClientApp [`#46`](https://github.com/axa-group/radar/pull/46) by dependabot-preview[bot]
+- chore(deps-dev): bump ts-jest in /src/RadarTechno/ClientApp [`#56`](https://github.com/axa-group/radar/pull/56) by dependabot-preview[bot]
+- chore(deps): [security] bump eslint-utils in /src/RadarTechno/ClientApp [`#45`](https://github.com/axa-group/radar/pull/45) by dependabot-preview[bot]
+- chore(deps): bump react-router-dom in /src/RadarTechno/ClientApp [`#35`](https://github.com/axa-group/radar/pull/35) by dependabot-preview[bot]
+- chore(deps): bump @types/react-dom in /src/RadarTechno/ClientApp [`#43`](https://github.com/axa-group/radar/pull/43) by dependabot-preview[bot]
+- chore(mergify) auto merge dependabot pullrequest [`#60`](https://github.com/axa-group/radar/pull/60) by Guillaume Chervet
+- [Security] Bump lodash.template in /src/RadarTechno/ClientApp [`#15`](https://github.com/axa-group/radar/pull/15) by dependabot-preview[bot]
+- [Security] Bump fstream in /src/RadarTechno/ClientApp [`#7`](https://github.com/axa-group/radar/pull/7) by dependabot-preview[bot]
+- Bump coverlet.msbuild from 2.5.1 to 2.6.3 [`#6`](https://github.com/axa-group/radar/pull/6) by dependabot-preview[bot]
+- Bump xunit.runner.visualstudio from 2.4.0 to 2.4.1 [`#5`](https://github.com/axa-group/radar/pull/5) by dependabot-preview[bot]
+- Bump Moq from 4.10.1 to 4.12.0 [`#3`](https://github.com/axa-group/radar/pull/3) by dependabot-preview[bot]
+- docs(changelog) update to new 1.0.4 [`0145155`](https://github.com/axa-group/radar/commit/0145155cff7de0fcb03ddc56c89f02da99c3c957) by Build-CI 
+
 #### [v1.0.4](https://github.com/axa-group/radar/compare/v1.0.3...v1.0.4)
 > 12 September 2019
 - fix(publish) pipeline [`#55`](https://github.com/axa-group/radar/pull/55) by Guillaume Chervet
