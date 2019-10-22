@@ -73,7 +73,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "husky": "^3.0.4",
-    "react-test-renderer": "^16.8.5",
+    "react-test-renderer": "^16.11.0",
     "require-context.macro": "^1.0.4",
     "storybook-react-router": "^1.0.5",
     "ts-jest": "^24.1.0",
