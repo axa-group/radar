@@ -1,6 +1,11 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
+#### [v1.0.6](https://github.com/axa-group/radar/compare/v1.0.5...v1.0.6)
+> 12 November 2019
+- test(history) tested historyRepository [`#85`](https://github.com/axa-group/radar/pull/85) by Arnaud Bernard
+- docs(changelog) update to new 1.0.5 [`cd4c315`](https://github.com/axa-group/radar/commit/cd4c3151672b79cb7c9f1aa2ad6fc1edfc14d54b) by Build-CI 
+
 #### [v1.0.5](https://github.com/axa-group/radar/compare/v1.0.4...v1.0.5)
 > 3 October 2019
 - fix(entity) fixed bug in add technology [`#89`](https://github.com/axa-group/radar/pull/89) by Arnaud Bernard
