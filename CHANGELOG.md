@@ -1,6 +1,11 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
+#### [v1.0.7](https://github.com/axa-group/radar/compare/v1.0.6...v1.0.7)
+> 29 November 2019
+- chore(deps): bump luxon in /src/RadarTechno/ClientApp [`#119`](https://github.com/axa-group/radar/pull/119) by dependabot-preview[bot]
+- docs(changelog) update to new 1.0.6 [`2ef792f`](https://github.com/axa-group/radar/commit/2ef792fcdfad64364273f1c7d3b02f8c66d28300) by Build-CI 
+
 #### [v1.0.6](https://github.com/axa-group/radar/compare/v1.0.5...v1.0.6)
 > 12 November 2019
 - test(history) tested historyRepository [`#85`](https://github.com/axa-group/radar/pull/85) by Arnaud Bernard
