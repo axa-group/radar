@@ -22,8 +22,6 @@ namespace RadarTechno.Technologies
                 InternalId = new ObjectId(value);
             }
         }
-        [BsonElement("_v")]
-        public int Dun { get; set; } = 0;
 
         [BsonElement("__v")]
         public int Version { get; set; } = 0;
