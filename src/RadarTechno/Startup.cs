@@ -4,40 +4,42 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using NJsonSchema;
 using NSwag.AspNetCore;
 using RadarTechno.Entities;
 using RadarTechno.Technologies;
 using RadarTechno.Users;
 using RadarTechno.History;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
+using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 
 namespace RadarTechno
 {
+    [ExcludeFromCodeCoverage]
     public class Startup
     {
-        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
             CurrentEnvironment = env;
         }
 
         public IConfiguration Configuration { get; }
-        private IHostingEnvironment CurrentEnvironment { get; set; }
+        private IWebHostEnvironment CurrentEnvironment { get; set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            // In production, the React files will be served from this directory
+            services
+                .AddControllersWithViews()
+                .AddNewtonsoftJson();
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
@@ -129,7 +131,7 @@ namespace RadarTechno
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IServiceProvider serviceProvider)
         {
             app.Use(async (context, next) =>
             {
@@ -141,7 +143,7 @@ namespace RadarTechno
             var historyService = serviceProvider.GetService<HistoryService>();
             queue.SubscribeAsync("history", historyService.Callback);
             
-            if (env.IsDevelopment())
+            if (CurrentEnvironment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
@@ -157,13 +159,13 @@ namespace RadarTechno
                 }
             }
             
-            app.UseStaticFiles();
             // Set up custom content types - associating file extension to MIME type
             var provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".json"] = "application/json";
-            app.UseSpaStaticFiles(new StaticFileOptions()
+            app.UseStaticFiles(new StaticFileOptions
             {
-                ContentTypeProvider = provider
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), "ClientApp"))
             });
 
             app.UseAuthentication();
@@ -171,17 +173,19 @@ namespace RadarTechno
             app.UseSwagger();
             app.UseSwaggerUi3();
 
-            app.UseMvc(routes =>
+            app.UseRouting();
+            app.UseAuthorization();
+            app.UseEndpoints(endpoints =>
             {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action=Index}/{id?}");
-            });
-
+                endpoints.MapControllers(); 
+                endpoints.MapControllerRoute(
+                    "default", "{controller=Home}/{action=Index}/{id?}");
+            }); 
+            
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
-                if (env.IsDevelopment())
+                if (CurrentEnvironment.IsDevelopment())
                 {
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }

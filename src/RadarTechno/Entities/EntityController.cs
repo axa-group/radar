@@ -44,7 +44,7 @@ namespace RadarTechno.Entities
         public async Task<IActionResult> GetAllEntities([FromServices] IEntityRepository entityRepository)
         {
             var result = await entityRepository.FindAllAsync();
-            if (EnumerableExtensions.Any(result))
+            if (result.Any())
             {
                 return Ok(result);
             }
@@ -59,14 +59,14 @@ namespace RadarTechno.Entities
             string id)
         {
             var result = await entityRepository.FindTechnologies(technologyRepository, id);
-            if (result != null && EnumerableExtensions.Any(result))
+            if (result != null && result.Any())
             {
                 var referenceEntityId = configuration.GetSection("ReferenceEntityId");
                 if (referenceEntityId != null && !String.IsNullOrEmpty(referenceEntityId.Value))
                 {
                     var referenceEntityTechnologies =
                         await entityRepository.FindTechnologies(technologyRepository, referenceEntityId.Value);
-                    if (referenceEntityTechnologies != null && EnumerableExtensions.Any(referenceEntityTechnologies))
+                    if (referenceEntityTechnologies != null && referenceEntityTechnologies.Any())
                     {
                         result = entityService.PopulateEntityTechnologiesGroupStatus(result,
                             referenceEntityTechnologies);

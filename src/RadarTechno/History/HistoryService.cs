@@ -35,7 +35,7 @@ namespace RadarTechno.History
 
         public async Task AddHistory(HistoryMessage historyMessage)
         {
-            _ = Task.Run(async () =>
+            await Task.Run(async () =>
             {
                 using (var scope = _serviceScopeFactory.CreateScope())
                 {
