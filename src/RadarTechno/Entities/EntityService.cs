@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Internal;
 
 namespace RadarTechno.Entities
@@ -13,8 +11,8 @@ namespace RadarTechno.Entities
             IEnumerable<EntityTechnology> referenceEntityTechnologies)
         {
             var newEntityTechnologies = entityTechnologies;
-            if (referenceEntityTechnologies != null && EnumerableExtensions.Any(referenceEntityTechnologies)
-                && newEntityTechnologies!= null && EnumerableExtensions.Any(newEntityTechnologies))
+            if (referenceEntityTechnologies != null && referenceEntityTechnologies.Any()
+                && newEntityTechnologies!= null && newEntityTechnologies.Any())
             {
                 var refEntityTechnologiesList = new List<EntityTechnology>(referenceEntityTechnologies);
                 foreach (var entityTechnology in newEntityTechnologies)

@@ -7,6 +7,10 @@ namespace RadarTechno.Entities
 {
     public class EntityTechnology
     {
+        public EntityTechnology()
+        {
+        }
+
         public EntityTechnology(string technologyId, string status, EntityTechnologyUrl[] entityTechnologyUrls)
         {
             InternalId = ObjectId.GenerateNewId();
