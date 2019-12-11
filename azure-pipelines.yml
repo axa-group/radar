@@ -106,11 +106,6 @@ steps:
       git push --tags
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
-
-  - task: GitVersion@5
-    inputs:
-      runtime: 'core'
-      updateAssemblyInfo: true
   
   - script: node ./scripts/publish-changelog.js $(Github.Token)
     displayName: 'push changelog'
@@ -123,6 +118,11 @@ steps:
       publishWebProjects: True
       arguments: "--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -f netcoreapp3.1 /p:AssemblyVersion=$(GitVersion.AssemblySemVer)"
       zipAfterPublish: True
+
+  - task: GitVersion@5
+    inputs:
+      runtime: 'core'
+      updateAssemblyInfo: true
 
   - task: DotNetCoreInstaller@0
     displayName: 'Use .NET Core SDK 2.2.105 For Sonar Cloud'
