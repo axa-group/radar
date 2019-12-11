@@ -7,7 +7,6 @@ pool:
   vmImage: "Ubuntu 16.04"
 
 steps:
-
   - task: NodeTool@0
     inputs:
       versionSpec: "8.x"
@@ -83,6 +82,14 @@ steps:
       command: test
       projects: "**/*tests.csproj"
       arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml"'
+      
+  - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+    displayName: "Run Code Analysis"
+    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
+
+  - task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
+    displayName: "Publish Quality Gate Result"
+    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: Npm@1
     displayName: "npm install"
@@ -106,34 +113,16 @@ steps:
       git push --tags
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
-  
-  - task: DotNetCoreInstaller@0
-    displayName: 'Use .NET Core SDK 2.2.105 For Sonar Cloud'
-    inputs:
-      version: '2.2.105'
 
   - task: GitVersion@5
     inputs:
       runtime: 'core'
       updateAssemblyInfo: true
-
+  
   - script: node ./scripts/publish-changelog.js $(Github.Token)
     displayName: 'push changelog'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
-  - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
-    displayName: "Run Code Analysis"
-    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
-
-  - task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
-    displayName: "Publish Quality Gate Result"
-    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
-    
-  - task: DotNetCoreInstaller@0
-    displayName: "Use .NET Core sdk 3.1.100"
-    inputs:
-      version: 3.1.100
-      
   - task: DotNetCoreCLI@2
     displayName: Publish
     inputs:
