@@ -107,10 +107,6 @@ steps:
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
   
-  - script: node ./scripts/publish-changelog.js $(Github.Token)
-    displayName: 'push changelog'
-    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
-
   - task: DotNetCoreCLI@2
     displayName: Publish
     inputs:
@@ -119,15 +115,19 @@ steps:
       arguments: "--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory) -f netcoreapp3.1 /p:AssemblyVersion=$(GitVersion.AssemblySemVer)"
       zipAfterPublish: True
 
+  - task: DotNetCoreInstaller@0
+    displayName: 'Use .NET Core SDK 2.2.105 For Sonar Cloud'
+    inputs:
+      version: '2.2.105'
+
   - task: GitVersion@5
     inputs:
       runtime: 'core'
       updateAssemblyInfo: true
 
-  - task: DotNetCoreInstaller@0
-    displayName: 'Use .NET Core SDK 2.2.105 For Sonar Cloud'
-    inputs:
-      version: '2.2.105'
+  - script: node ./scripts/publish-changelog.js $(Github.Token)
+    displayName: 'push changelog'
+    condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
     displayName: "Run Code Analysis"
