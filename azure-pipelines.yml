@@ -116,11 +116,11 @@ steps:
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
-  - task: GitVersion@5
+  - task: UseGitVersion@5
     inputs:
-      runtime: 'core'
+      versionSpec: '5.1.2'
       updateAssemblyInfo: true
-  
+
   - script: node ./scripts/publish-changelog.js $(Github.Token)
     displayName: 'push changelog'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
