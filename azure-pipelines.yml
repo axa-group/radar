@@ -115,6 +115,12 @@ steps:
       git push --tags
     displayName: ' npm version $(App.Version)'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
+      
+  - task: DotNetCoreInstaller@0
+    displayName: 'Use .NET Core sdk 2.2.207'
+    inputs:
+      version: 2.2.207
+    enabled: true
 
   - task: UseGitVersion@5
     inputs:
@@ -125,6 +131,12 @@ steps:
     displayName: 'push changelog'
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
+  - task: DotNetCoreInstaller@0
+    displayName: 'Use .NET Core sdk 3.1.100'
+    inputs:
+      version: 3.1.100
+    enabled: true
+    
   - task: DotNetCoreCLI@2
     displayName: Publish
     inputs:
