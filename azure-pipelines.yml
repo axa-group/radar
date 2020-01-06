@@ -122,9 +122,9 @@ steps:
       version: 2.2.207
     enabled: true
 
-  - task: UseGitVersion@5
+  - task: GitVersion@5
     inputs:
-      versionSpec: '5.1'
+      runtime: 'core'
       updateAssemblyInfo: true
 
   - script: node ./scripts/publish-changelog.js $(Github.Token)
@@ -136,7 +136,7 @@ steps:
     inputs:
       version: 3.1.100
     enabled: true
-    
+
   - task: DotNetCoreCLI@2
     displayName: Publish
     inputs:
