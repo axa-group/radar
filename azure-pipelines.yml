@@ -83,16 +83,6 @@ steps:
       projects: "**/*tests.csproj"
       arguments: '--configuration $(BuildConfiguration) /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=./coverage/opencover.xml"'
       
-  - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
-    displayName: "Run Code Analysis"
-    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
-    continueOnError: true
-
-  - task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
-    displayName: "Publish Quality Gate Result"
-    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
-    continueOnError: true
-
   - task: Npm@1
     displayName: "npm install"
     inputs:
@@ -121,6 +111,14 @@ steps:
     inputs:
       version: 2.2.207
     enabled: true
+
+  - task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+    displayName: "Run Code Analysis"
+    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
+
+  - task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
+    displayName: "Publish Quality Gate Result"
+    condition: and(succeeded(), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: GitVersion@5
     inputs:
