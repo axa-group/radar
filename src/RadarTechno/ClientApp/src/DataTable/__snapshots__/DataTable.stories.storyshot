@@ -709,7 +709,7 @@ exports[`Storyshots DataTable Data table 1`] = `
     </tbody>
   </table>
   <div
-    className=""
+    className="af-paging"
   >
     <div
       className="af-paging__limit"
@@ -718,7 +718,7 @@ exports[`Storyshots DataTable Data table 1`] = `
         className="af-paging__limit"
       >
         <form
-          className=""
+          className="af-paging__form"
         >
           <div
             className="af-form__group"
@@ -793,7 +793,7 @@ exports[`Storyshots DataTable Data table 1`] = `
       className="af-paging__pager"
     >
       <nav
-        className=""
+        className="af-pager"
       >
         <ul
           className="af-pager__pagination"

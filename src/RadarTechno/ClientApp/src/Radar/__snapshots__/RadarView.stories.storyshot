@@ -110,25 +110,30 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Excel
                     </h2>
-                    <div
-                      className="rt-radar__status-help"
+                    <span
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
                     >
                       <div
-                        className="af-popover__container-over"
-                        onClick={[Function]}
+                        className="rt-radar__status-help"
                       >
-                        <button
-                          className="btn af-btn--circle"
-                          type="button"
+                        <div
+                          className="af-popover__container-over"
+                          role="presentation"
                         >
-                          <span
-                            className="af-more-help"
+                          <button
+                            className="btn af-btn--circle"
+                            type="button"
                           >
-                            i
-                          </span>
-                        </button>
+                            <span
+                              className="af-more-help"
+                            >
+                              i
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <ul />
                 </div>
@@ -141,25 +146,30 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Reinforce
                     </h2>
-                    <div
-                      className="rt-radar__status-help"
+                    <span
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
                     >
                       <div
-                        className="af-popover__container-over"
-                        onClick={[Function]}
+                        className="rt-radar__status-help"
                       >
-                        <button
-                          className="btn af-btn--circle"
-                          type="button"
+                        <div
+                          className="af-popover__container-over"
+                          role="presentation"
                         >
-                          <span
-                            className="af-more-help"
+                          <button
+                            className="btn af-btn--circle"
+                            type="button"
                           >
-                            i
-                          </span>
-                        </button>
+                            <span
+                              className="af-more-help"
+                            >
+                              i
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <ul />
                 </div>
@@ -172,25 +182,30 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Assess
                     </h2>
-                    <div
-                      className="rt-radar__status-help"
+                    <span
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
                     >
                       <div
-                        className="af-popover__container-over"
-                        onClick={[Function]}
+                        className="rt-radar__status-help"
                       >
-                        <button
-                          className="btn af-btn--circle"
-                          type="button"
+                        <div
+                          className="af-popover__container-over"
+                          role="presentation"
                         >
-                          <span
-                            className="af-more-help"
+                          <button
+                            className="btn af-btn--circle"
+                            type="button"
                           >
-                            i
-                          </span>
-                        </button>
+                            <span
+                              className="af-more-help"
+                            >
+                              i
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <ul />
                 </div>
@@ -203,25 +218,30 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Deprecated
                     </h2>
-                    <div
-                      className="rt-radar__status-help"
+                    <span
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
                     >
                       <div
-                        className="af-popover__container-over"
-                        onClick={[Function]}
+                        className="rt-radar__status-help"
                       >
-                        <button
-                          className="btn af-btn--circle"
-                          type="button"
+                        <div
+                          className="af-popover__container-over"
+                          role="presentation"
                         >
-                          <span
-                            className="af-more-help"
+                          <button
+                            className="btn af-btn--circle"
+                            type="button"
                           >
-                            i
-                          </span>
-                        </button>
+                            <span
+                              className="af-more-help"
+                            >
+                              i
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <ul>
                     <li
@@ -247,25 +267,30 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Out
                     </h2>
-                    <div
-                      className="rt-radar__status-help"
+                    <span
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
                     >
                       <div
-                        className="af-popover__container-over"
-                        onClick={[Function]}
+                        className="rt-radar__status-help"
                       >
-                        <button
-                          className="btn af-btn--circle"
-                          type="button"
+                        <div
+                          className="af-popover__container-over"
+                          role="presentation"
                         >
-                          <span
-                            className="af-more-help"
+                          <button
+                            className="btn af-btn--circle"
+                            type="button"
                           >
-                            i
-                          </span>
-                        </button>
+                            <span
+                              className="af-more-help"
+                            >
+                              i
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <ul />
                 </div>
@@ -278,25 +303,30 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Candidate
                     </h2>
-                    <div
-                      className="rt-radar__status-help"
+                    <span
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
                     >
                       <div
-                        className="af-popover__container-over"
-                        onClick={[Function]}
+                        className="rt-radar__status-help"
                       >
-                        <button
-                          className="btn af-btn--circle"
-                          type="button"
+                        <div
+                          className="af-popover__container-over"
+                          role="presentation"
                         >
-                          <span
-                            className="af-more-help"
+                          <button
+                            className="btn af-btn--circle"
+                            type="button"
                           >
-                            i
-                          </span>
-                        </button>
+                            <span
+                              className="af-more-help"
+                            >
+                              i
+                            </span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <ul />
                 </div>
