@@ -18,6 +18,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 
 namespace RadarTechno
@@ -40,6 +41,7 @@ namespace RadarTechno
             services
                 .AddControllersWithViews()
                 .AddNewtonsoftJson();
+            
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/build";
@@ -162,11 +164,11 @@ namespace RadarTechno
             // Set up custom content types - associating file extension to MIME type
             var provider = new FileExtensionContentTypeProvider();
             provider.Mappings[".json"] = "application/json";
-            app.UseStaticFiles(new StaticFileOptions
+            
+            if (!CurrentEnvironment.IsDevelopment())
             {
-                FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), "ClientApp"))
-            });
+                app.UseSpaStaticFiles();
+            }
 
             app.UseAuthentication();
 
@@ -182,14 +184,15 @@ namespace RadarTechno
                     "default", "{controller=Home}/{action=Index}/{id?}");
             }); 
             
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
-                if (CurrentEnvironment.IsDevelopment())
+            
+                app.UseSpa(spa =>
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
-            });
+                    spa.Options.SourcePath = "ClientApp";
+                    if (CurrentEnvironment.IsDevelopment())
+                    {
+                        spa.UseReactDevelopmentServer(npmScript: "start");
+                    }
+                });
         }
     }
 }
