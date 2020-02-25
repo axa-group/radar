@@ -12,7 +12,7 @@
     "node-sass": "^4.11.0",
     "mw.validation": "^1.0.15",
     "react": "^16.12.0",
-    "react-dom": "^16.8.3",
+    "react-dom": "^16.12.0",
     "react-enhanced-reducer-hook": "^1.0.2",
     "react-monaco-editor": "^0.30.1",
     "react-router-dom": "^5.0.1",
