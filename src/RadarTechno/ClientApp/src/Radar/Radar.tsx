@@ -40,6 +40,7 @@ const renderPoints = (
   return arrayOfArrays.map((array, arrayIndex) => {
     return array.map((item: IFormattedEntityTechnology, index: number) => (
       <div 
+        key={item.id}
         className="radar-technology__container"
         style={{          
           right: `${(innerRadius + (radius-innerRadius) * (arrayIndex+1)/(arrayOfArrays.length+1)) 
