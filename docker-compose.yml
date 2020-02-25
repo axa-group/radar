@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.7'
 
 services:
 
@@ -9,10 +9,12 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
       MONGO_INITDB_DATABASE: radar
+      MONGO_INITDB_USERNAME: user
+      MONGO_INITDB_PASSWORD: password
     ports:
       - 27017:27017
     volumes:
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./.docker/mongodb/initdb.d/:/docker-entrypoint-initdb.d/
 
   mongo-express:
     image: mongo-express
