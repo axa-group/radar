@@ -1,6 +1,6 @@
 
 db.auth('root', 'example');
-radarDb = db.getSiblingDB('radar');
+var radarDb = db.getSiblingDB('radar');
 radarDb.entities.insert({ 
     "_id": ObjectId("5d5188985d0af00006e8c77e"),
     "name":"AXA France",
