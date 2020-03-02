@@ -9,7 +9,7 @@
     "luxon": "^1.21.3",
     "monaco-editor": "^0.18.1",
     "monaco-editor-webpack-plugin": "^1.7.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "mw.validation": "^1.0.15",
     "react": "^16.13.0",
     "react-dom": "^16.12.0",
