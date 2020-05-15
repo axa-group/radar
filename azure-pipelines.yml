@@ -58,13 +58,6 @@ steps:
       command: run
       arguments: ts
 
-  - task: Npm@0
-    displayName: "npm tslint"
-    inputs:
-      cwd: src/RadarTechno/ClientApp
-      command: run
-      arguments: tslint
-
   - task: DotNetCoreInstaller@0
     displayName: "Use .NET Core sdk 3.1.202"
     inputs:
