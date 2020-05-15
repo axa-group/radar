@@ -35,10 +35,11 @@
         display: inline-block;
       }
     }
-  }
-  &--hide-menu-buton {  
-    .af-btn--circle.af-title-bar__mobile-menu {
-      display: none;
+    &--hide-menu-buton {
+      .af-btn--circle.af-title-bar__mobile-menu {
+        display: none;
+      }
     }
   }
 }
+

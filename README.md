@@ -39,6 +39,14 @@ The Radar is a web application and server developped with .net Core and React. T
 Technologies must be first created, and then added to an entity with a status.
 It is entity-based, meaning that a user in the app belongs to an entity, and the radar displays the technologies bases on their entity status.
 
+### Architecture
+
+The architecture and infrastructure of the application :
+<p align="center">
+    <img src="./docs/img/radar-technologies-infrastructure.png"
+     alt="radar-technologies-infrastructure" />
+</p>
+
 ### Authentication
 
 The app uses a jwt based authentication. The algorithm used for hashing the password is one of many possibilities to do it, and is not compliant with the standards used by AXA for authentication and password hashing.
@@ -124,12 +132,6 @@ The workflow tab is entity-based, meaning that each entity can have their own wo
 ### Swagger
 
 A detailed documentation is available by accessing the `/swagger` url once the app is running.
-
-### React
-
-- Components are stateless by default
-- Components are tested with Storybook
-- [React documentation](https://axaguildev.github.io?target=react_toolkit_design)
 
 ## Contribute
 

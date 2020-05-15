@@ -58,17 +58,10 @@ steps:
       command: run
       arguments: ts
 
-  - task: Npm@0
-    displayName: "npm tslint"
-    inputs:
-      cwd: src/RadarTechno/ClientApp
-      command: run
-      arguments: tslint
-
   - task: DotNetCoreInstaller@0
-    displayName: "Use .NET Core sdk 3.1.100"
+    displayName: "Use .NET Core sdk 3.1.202"
     inputs:
-      version: 3.1.100
+      version: 3.1.202
       
   - task: DotNetCoreCLI@2
     displayName: "dotnet build"
@@ -130,9 +123,9 @@ steps:
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: DotNetCoreInstaller@0
-    displayName: 'Use .NET Core sdk 3.1.100'
+    displayName: 'Use .NET Core sdk 3.1.202'
     inputs:
-      version: 3.1.100
+      version: 3.1.202
     enabled: true
 
   - task: DotNetCoreCLI@2
