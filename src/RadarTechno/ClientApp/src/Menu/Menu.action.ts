@@ -9,7 +9,7 @@ export const handleClick = () => (dispatch: (...args: any[]) => any, getState: (
 
 export const initPosition = () => (dispatch: (...args: any[]) => any) => {
   const paths = ['/workflow', '/technologies', '/all-technologies', '/users', '/entities'];
-  const position = paths.indexOf(location.pathname) + 1;
+  const position = paths.indexOf(window.location.pathname) + 1;
   dispatch({ position, type: SET_POSITION });
 };
 
