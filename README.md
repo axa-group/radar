@@ -47,12 +47,6 @@ The architecture and infrastructure of the application :
      alt="radar-technologies-infrastructure" />
 </p>
 
-How we deployed it at AXA :
-<p align="center">
-    <img src="./docs/img/radar-technologies-infrastructure-axa.png"
-     alt="radar-technologies-infrastructure-axa" />
-</p>
-
 ### Authentication
 
 The app uses a jwt based authentication. The algorithm used for hashing the password is one of many possibilities to do it, and is not compliant with the standards used by AXA for authentication and password hashing.
