@@ -28,9 +28,7 @@
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "ts": "./node_modules/.bin/tsc",
-    "ts:watch": "./node_modules/.bin/tsc -w",
-    "tslint": "tslint src/**/*.ts{,x} --project tsconfig.json",
-    "tslint:fix": "tslint src/**/*.ts{,x} --project tsconfig.json --fix"
+    "ts:watch": "./node_modules/.bin/tsc -w"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,7 +41,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "npm run ts && npm run tslint",
+      "pre-commit": "npm run ts",
       "pre-push": "npm test -- --coverage"
     }
   },
