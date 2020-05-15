@@ -139,12 +139,6 @@ The workflow tab is entity-based, meaning that each entity can have their own wo
 
 A detailed documentation is available by accessing the `/swagger` url once the app is running.
 
-### React
-
-- Components are stateless by default
-- Components are tested with Storybook
-- [React documentation](https://axaguildev.github.io?target=react_toolkit_design)
-
 ## Contribute
 
 - [How to contribute](./CONTRIBUTING.md)
