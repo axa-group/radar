@@ -1,6 +1,12 @@
 ### Changelog
 All notable changes to this project will be documented in this file.
 
+#### [v1.0.9](https://github.com/axa-group/radar/compare/v1.0.8...v1.0.9)
+> 20 May 2020
+- chore(deps): bump react in /src/RadarTechno/ClientApp [`#283`](https://github.com/axa-group/radar/pull/283) by dependabot-preview[bot]
+- fix(footer): footer should display version [`#291`](https://github.com/axa-group/radar/pull/291) by Guillaume Chervet
+- docs(changelog) update to new 1.0.8 [`90bc3c6`](https://github.com/axa-group/radar/commit/90bc3c67cef0b418b131609d743d823c981836bd) by Build-CI 
+
 #### [v1.0.8](https://github.com/axa-group/radar/compare/v1.0.7...v1.0.8)
 > 15 May 2020
 - refactor(update) update librairies [`#288`](https://github.com/axa-group/radar/pull/288) by Guillaume Chervet
