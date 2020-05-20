@@ -10,7 +10,7 @@
     "monaco-editor-webpack-plugin": "^1.9.0",
     "mw.validation": "^1.0.15",
     "sass": "^1.26.3",
-    "react": "^16.13.0",
+    "react": "^16.13.1",
     "react-dom": "^16.13.0",
     "react-enhanced-reducer-hook": "^1.0.2",
     "react-monaco-editor": "^0.34.0",
