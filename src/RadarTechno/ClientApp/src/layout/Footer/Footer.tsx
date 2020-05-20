@@ -8,8 +8,7 @@ const data = require('../../version.json');
 
 const FooterApp = () => {
   return (
-    <Footer icon={logo}>
-      @ 2019 AXA Tous droits réservés - {data.version}
+    <Footer icon={logo} copyright={`@ 2019 AXA Tous droits réservés - ${data.version}`}>
     </Footer>
   );
 };

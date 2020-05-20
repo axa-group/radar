@@ -22,7 +22,7 @@ exports[`Storyshots Layout Footer 1`] = `
     <div
       className="af-footer-content"
     >
-      @ 2018 AXA Tous droits réservés
+      @ 2019 AXA Tous droits réservés - 1.0.7
     </div>
   </div>
 </footer>
