@@ -9,69 +9,6 @@ import { IRadarColors } from './Radar.d';
 
 import './RadarView.scss';
 
-
-const RadarElement = ({
-                        radarTechnologies,
-                        colors,
-                        hoverId,
-                        onTechnologyClick,
-                        onMouseEnter,
-                        onMouseLeave,
-                        sticky, 
-                          technologyKey
-                      }: {
-  radarTechnologies: IFormattedEntityTechnology[],
-  colors: IRadarColors,
-  hoverId: string,
-  onTechnologyClick: (...args: any[]) => void,
-  onMouseEnter: (...args: any[]) => void,
-  onMouseLeave: (...args: any[]) => void,
-  sticky?: boolean
-    technologyKey: string
-}) => (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-4">
-          {Object.keys(Status).map(statusKey => (
-              <div key={statusKey}>
-                <div className="rt-radar__status">
-                  <h2 className="rt-radar__status-title">{Status[statusKey]}</h2>
-                  <HelpButton className="rt-radar__status-help">{StatusDescription[statusKey]}</HelpButton>
-                </div>
-                <ul>
-                  {radarTechnologies.length ? radarTechnologies.filter(element =>
-                      element.status === Status[statusKey] &&
-                      element.category === technologyKey)
-                      .map(element =>
-                          <li key={element.technologyId} className="rt-radar__technology"
-                              onClick={() => onTechnologyClick(element)}
-                              onMouseEnter={() => onMouseEnter(element.technologyId)}
-                              onMouseLeave={() => onMouseLeave(element.technologyId)}>
-                            <span className="rt-radar__technology-name">
-                              {element.name}
-                            </span>
-                            {element.scope &&
-                            (<span className="af-badge af-badge--danger rt-radar__badge">
-                                Scope and/or usage restriction
-                              </span>)
-                            }
-                          </li>) : ''}
-                </ul>
-              </div>
-          ))}
-        </div>
-        <div className="col-md-6 offset-md-2 rt-radar__container">
-          <Radar width={600} height={600} colors={colors[technologyKey]} hoverId={hoverId}
-                 onMouseEnter={onMouseEnter}
-                 onMouseLeave={onMouseLeave}
-                 sticky={sticky}
-                 technologies={radarTechnologies.length &&
-                 radarTechnologies.filter(element => element.category === technologyKey)} />
-        </div>
-      </div>
-    </div>
-)
-
 export const RadarView = ({
   loading,
   radarTechnologies,
@@ -83,7 +20,7 @@ export const RadarView = ({
   onTechnologyModalClose,
   onMouseEnter,
   onMouseLeave,
-  sticky
+  sticky,
 }: {
   loading: boolean,
   radarTechnologies: IFormattedEntityTechnology[],
@@ -99,24 +36,61 @@ export const RadarView = ({
 }) => (
   <div className="af-home container">
     <Loader text="Loading ..." mode={loading ? 'get' : 'none'}>
-      {radarTechnologies && (<Tabs onChange={() => {}}>
-          {Object.keys(Category).map(key => (
-                <Tabs.Tab
-                classModifier="radar"
-                key={key}
-                title={Category[key]}>
-                     <RadarElement
-                        radarTechnologies={radarTechnologies}
-                        colors={colors}
-                        hoverId={hoverId}
-                        onTechnologyClick={onTechnologyClick}
-                        onMouseEnter={onMouseEnter}
-                        onMouseLeave={onMouseLeave}
-                        sticky={sticky}
-                        technologyKey={key}
-                        />
-                </Tabs.Tab>
-          ))}
+      {radarTechnologies && (
+        <Tabs>
+        {Object.keys(Category).map((key, index) => (
+          <Tabs.Tab
+            key={key}
+            id={index}
+            classModifier="radar"
+            title={Category[key]}>
+            <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-4">
+              {Object.keys(Status).map(statusKey => (
+                <div key={statusKey}>
+                  <div className="rt-radar__status">
+                    <h2 className="rt-radar__status-title">{Status[statusKey]}</h2>
+                    <HelpButton className="rt-radar__status-help">{StatusDescription[statusKey]}</HelpButton>
+                  </div>
+                  <ul>
+                    {radarTechnologies.length ? radarTechnologies.filter(element =>
+                        element.status === Status[statusKey] &&
+                        element.category.toLowerCase() === key)
+                      .map(element =>
+                        <li key={element.technologyId} className="rt-radar__technology"
+                          onClick={() => onTechnologyClick(element)}
+                          onMouseEnter={() => onMouseEnter(element.technologyId)} 
+                          onMouseLeave={() => onMouseLeave(element.technologyId)}>
+                          <span className="rt-radar__technology-name">
+                            {element.name}
+                          </span>
+                          {element.scope && 
+                            (<span className="af-badge af-badge--danger rt-radar__badge">
+                              Scope and/or usage restriction
+                            </span>) 
+                          }
+                        </li>) : ''}
+                  </ul>
+                </div>
+              ))}
+              </div>
+              <div className="col-md-6 offset-md-2 rt-radar__container">
+                <Radar 
+                  width={600} 
+                  height={600} 
+                  colors={colors[key.toLowerCase()]} 
+                  hoverId={hoverId}
+                  onMouseEnter={onMouseEnter}
+                  onMouseLeave={onMouseLeave}
+                  sticky={sticky}
+                  technologies={radarTechnologies.length && 
+                    radarTechnologies.filter(element => element.category === key)} />
+              </div>
+            </div>
+          </div>
+        </Tabs.Tab>
+        ))}
       </Tabs>)}
       <ViewEntityTechnologyModal isOpen={isModalOpen} item={modalItem} onClose={onTechnologyModalClose} />
     </Loader>

@@ -3,19 +3,19 @@
 exports[`Storyshots SideModal Side modal with item 1`] = `
 Array [
   <div
-    className="af-modal af-modal--opened"
+    className="radar-side-modal radar-side-modal--opened"
   >
     <div
-      className="af-modal__header"
+      className="radar-side-modal__header"
     >
       <h2
-        className="af-modal__header-title"
+        className="radar-side-modal__header-title"
       >
         title
       </h2>
       <button
         aria-label="Close"
-        className="af-modal__header-close-btn"
+        className="radar-side-modal__header-close-btn"
         onClick={[Function]}
         type="button"
       >
@@ -26,7 +26,7 @@ Array [
       </button>
     </div>
     <div
-      className="af-modal__body"
+      className="radar-side-modal__body"
     >
       <p>
         ieozjfozjefzo
@@ -34,7 +34,7 @@ Array [
     </div>
   </div>,
   <div
-    className="af-modal__overlay"
+    className="radar-side-modal__overlay"
     onClick={[Function]}
   />,
 ]

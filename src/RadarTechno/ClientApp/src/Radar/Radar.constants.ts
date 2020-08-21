@@ -2,6 +2,7 @@ export const LOAD_TECHNOLOGIES = 'LOAD_TECHNOLOGIES';
 export const SET_HOVER_ID = 'SET_HOVER_ID';
 
 export const radarColors = {
+  default: ['#777', '#64ffda', '#1de9b6', '#00bfa5'],
   infrastructures: ['#777', '#64ffda', '#1de9b6', '#00bfa5'],
   frameworks: ['#777', '#ef9a9a', '#ef5350', '#d32f2f'],
   patterns: ['#777', '#fff176', '#fdd835', '#f9a825'],
