@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
 namespace RadarTechno
@@ -14,9 +15,22 @@ namespace RadarTechno
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            })
+            .ConfigureAppConfiguration((context, config) =>
+            {
+                if (!context.HostingEnvironment.IsDevelopment())
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    var builtConfig = config.Build();
+                    if(string.IsNullOrWhiteSpace(builtConfig["KeyVault:BaseUrl"])) {
+                        var keyVaultConfigBuilder = new ConfigurationBuilder();
+                        keyVaultConfigBuilder.AddAzureKeyVault(builtConfig["KeyVault:BaseUrl"]);
+                        var keyVaultConfig = keyVaultConfigBuilder.Build();
+                        config.AddConfiguration(keyVaultConfig);
+                    }
+                }
+            });
     }
 }
