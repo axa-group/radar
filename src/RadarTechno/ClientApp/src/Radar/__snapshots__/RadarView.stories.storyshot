@@ -110,9 +110,14 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Excel
                     </h2>
-                    <span
+                    <div
+                      className="af-popover__wrapper"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      role="button"
+                      tabIndex="0"
                     >
                       <div
                         className="rt-radar__status-help"
@@ -133,7 +138,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                           </button>
                         </div>
                       </div>
-                    </span>
+                    </div>
                   </div>
                   <ul />
                 </div>
@@ -146,9 +151,14 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Reinforce
                     </h2>
-                    <span
+                    <div
+                      className="af-popover__wrapper"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      role="button"
+                      tabIndex="0"
                     >
                       <div
                         className="rt-radar__status-help"
@@ -169,7 +179,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                           </button>
                         </div>
                       </div>
-                    </span>
+                    </div>
                   </div>
                   <ul />
                 </div>
@@ -182,9 +192,14 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Assess
                     </h2>
-                    <span
+                    <div
+                      className="af-popover__wrapper"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      role="button"
+                      tabIndex="0"
                     >
                       <div
                         className="rt-radar__status-help"
@@ -205,7 +220,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                           </button>
                         </div>
                       </div>
-                    </span>
+                    </div>
                   </div>
                   <ul />
                 </div>
@@ -218,9 +233,14 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Deprecated
                     </h2>
-                    <span
+                    <div
+                      className="af-popover__wrapper"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      role="button"
+                      tabIndex="0"
                     >
                       <div
                         className="rt-radar__status-help"
@@ -241,7 +261,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                           </button>
                         </div>
                       </div>
-                    </span>
+                    </div>
                   </div>
                   <ul>
                     <li
@@ -267,9 +287,14 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Out
                     </h2>
-                    <span
+                    <div
+                      className="af-popover__wrapper"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      role="button"
+                      tabIndex="0"
                     >
                       <div
                         className="rt-radar__status-help"
@@ -290,7 +315,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                           </button>
                         </div>
                       </div>
-                    </span>
+                    </div>
                   </div>
                   <ul />
                 </div>
@@ -303,9 +328,14 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                     >
                       Candidate
                     </h2>
-                    <span
+                    <div
+                      className="af-popover__wrapper"
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
+                      role="button"
+                      tabIndex="0"
                     >
                       <div
                         className="rt-radar__status-help"
@@ -326,7 +356,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
                           </button>
                         </div>
                       </div>
-                    </span>
+                    </div>
                   </div>
                   <ul />
                 </div>
@@ -508,19 +538,19 @@ exports[`Storyshots Radar Technology radar view 1`] = `
       </div>
     </div>
     <div
-      className="af-modal af-modal--closed"
+      className="radar-side-modal radar-side-modal--closed"
     >
       <div
-        className="af-modal__header"
+        className="radar-side-modal__header"
       >
         <h2
-          className="af-modal__header-title"
+          className="radar-side-modal__header-title"
         >
           Solution de parametrage
         </h2>
         <button
           aria-label="Close"
-          className="af-modal__header-close-btn"
+          className="radar-side-modal__header-close-btn"
           onClick={[Function]}
           type="button"
         >
@@ -531,7 +561,7 @@ exports[`Storyshots Radar Technology radar view 1`] = `
         </button>
       </div>
       <div
-        className="af-modal__body"
+        className="radar-side-modal__body"
       >
         <div
           className="row"

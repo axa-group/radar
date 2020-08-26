@@ -9,16 +9,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using NSwag.AspNetCore;
 using RadarTechno.Entities;
 using RadarTechno.Technologies;
 using RadarTechno.Users;
 using RadarTechno.History;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.FileProviders;
-using System.IO;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 
 namespace RadarTechno
@@ -39,7 +35,7 @@ namespace RadarTechno
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddControllersWithViews()
+                .AddControllers()
                 .AddNewtonsoftJson();
             
             services.AddSpaStaticFiles(configuration =>
@@ -179,20 +175,16 @@ namespace RadarTechno
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers(); 
-                endpoints.MapControllerRoute(
-                    "default", "{controller=Home}/{action=Index}/{id?}");
-            }); 
-            
-            
-                app.UseSpa(spa =>
+                endpoints.MapControllers();
+            });
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "ClientApp";
+                if (CurrentEnvironment.IsDevelopment())
                 {
-                    spa.Options.SourcePath = "ClientApp";
-                    if (CurrentEnvironment.IsDevelopment())
-                    {
-                        spa.UseReactDevelopmentServer(npmScript: "start");
-                    }
-                });
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
+            });
         }
     }
 }

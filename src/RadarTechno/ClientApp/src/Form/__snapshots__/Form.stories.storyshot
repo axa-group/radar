@@ -2,7 +2,7 @@
 
 exports[`Storyshots Forms Form 1`] = `
 <div
-  className="af-form radar-form"
+  className="radar-form"
 >
   <form
     name="myform"
@@ -248,20 +248,20 @@ exports[`Storyshots Forms Form 1`] = `
                 className="af-form__select"
               >
                 <div
-                  className="css-1pcexqc-container react-select"
+                  className="react-select css-2b097c-container"
                   id="4"
                   onKeyDown={[Function]}
                 >
                   <div
-                    className="css-bg1rzq-control"
+                    className=" css-yk16xz-control"
                     onMouseDown={[Function]}
                     onTouchEnd={[Function]}
                   >
                     <div
-                      className="css-1hwfws3"
+                      className=" css-1hwfws3"
                     >
                       <div
-                        className="css-151xaom-placeholder"
+                        className=" css-1wa3eu0-placeholder"
                       >
                         Select
                       </div>
@@ -324,14 +324,14 @@ exports[`Storyshots Forms Form 1`] = `
                       </div>
                     </div>
                     <div
-                      className="css-1wy0on6"
+                      className=" css-1wy0on6"
                     >
                       <span
-                        className="css-bgvzuu-indicatorSeparator"
+                        className=" css-1okebmr-indicatorSeparator"
                       />
                       <div
                         aria-hidden="true"
-                        className="css-16pqwjk-indicatorContainer"
+                        className=" css-tlfecz-indicatorContainer"
                         onMouseDown={[Function]}
                         onTouchEnd={[Function]}
                       >

@@ -9,17 +9,17 @@ export const SideModal = (props: {
   title: string
 }) => (
     <>
-      <div className={`af-modal ${props.isOpen ? 'af-modal--opened' : 'af-modal--closed'}`}>
-        <div className="af-modal__header">
-          <h2 className="af-modal__header-title">{props.title}</h2>
-          <button className="af-modal__header-close-btn" onClick={() => props.onClose()} type="button" aria-label="Close">
+      <div className={`radar-side-modal ${props.isOpen ? 'radar-side-modal--opened' : 'radar-side-modal--closed'}`}>
+        <div className="radar-side-modal__header">
+          <h2 className="radar-side-modal__header-title">{props.title}</h2>
+          <button className="radar-side-modal__header-close-btn" onClick={() => props.onClose()} type="button" aria-label="Close">
             <i className="glyphicon glyphicon-close" aria-hidden="true" />
           </button>
         </div>
-        <div className="af-modal__body">
+        <div className="radar-side-modal__body">
           {props.children}
         </div>
       </div>
-      {props.isOpen && <div className="af-modal__overlay" onClick={() => props.onClose()} />}
+      {props.isOpen && <div className="radar-side-modal__overlay" onClick={() => props.onClose()} />}
     </>
 );

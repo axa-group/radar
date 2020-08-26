@@ -54,6 +54,7 @@ storiesOf('Radar', module)
   <RadarView 
     hoverId={text('hoverId', '')}
     colors={{
+      default: ["#777", "#64ffda", "#1de9b6", "#00bfa5"],
       infrastructures: ["#777", "#64ffda", "#1de9b6", "#00bfa5"],
       frameworks: ["#777", "#ef9a9a", "#ef5350", "#d32f2f"],
       patterns: ["#777", "#fff176", "#fdd835", "#f9a825"],

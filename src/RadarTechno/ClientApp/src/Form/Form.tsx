@@ -37,7 +37,7 @@ export const Form = ({
   onMultiUrlsAdd?: (...args: any[]) => any,
   onMultiUrlsRemove?: (...args: any[]) => any
 }) => (
-  <div className="af-form radar-form">
+  <div className="radar-form">
     <form name="myform">
       {error && <Alert classModifier="error" title={error} />}
       <article className="af-panel af-radar-panel">
