@@ -9,7 +9,7 @@ pool:
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: "8.x"
+      versionSpec: "10.x"
     displayName: "Install Node.js"
 
   - task: jessehouwing.jessehouwing-vsts-variable-tasks.vsts-variable-transform.VariableTransformTask@1
@@ -67,6 +67,7 @@ steps:
     displayName: "dotnet build"
     inputs:
       projects: "**/*.csproj"
+      workingDirectory: ./
 
   - task: DotNetCoreCLI@2
     displayName: "dotnet test"
