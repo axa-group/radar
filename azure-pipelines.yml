@@ -67,7 +67,6 @@ steps:
     displayName: "dotnet build"
     inputs:
       projects: "**/*.csproj"
-      arguments: '-c $(BuildConfiguration)'
 
   - task: DotNetCoreCLI@2
     displayName: "dotnet test"
