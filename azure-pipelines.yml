@@ -59,9 +59,9 @@ steps:
       arguments: ts
 
   - task: DotNetCoreInstaller@0
-    displayName: "Use .NET Core sdk 3.1.202"
+    displayName: "Use .NET Core sdk from global.json"
     inputs:
-      version: 3.1.202
+      useGlobalJson: true
       
   - task: DotNetCoreCLI@2
     displayName: "dotnet build"
@@ -123,9 +123,9 @@ steps:
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: DotNetCoreInstaller@0
-    displayName: 'Use .NET Core sdk 3.1.202'
+    displayName: 'Use .NET Core sdk from global.json'
     inputs:
-      version: 3.1.202
+      useGlobalJson: true
     enabled: true
 
   - task: DotNetCoreCLI@2
