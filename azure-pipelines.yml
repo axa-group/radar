@@ -9,7 +9,7 @@ pool:
 steps:
   - task: NodeTool@0
     inputs:
-      versionSpec: "8.x"
+      versionSpec: "10.x"
     displayName: "Install Node.js"
 
   - task: jessehouwing.jessehouwing-vsts-variable-tasks.vsts-variable-transform.VariableTransformTask@1
@@ -59,15 +59,15 @@ steps:
       arguments: ts
 
   - task: DotNetCoreInstaller@0
-    displayName: "Use .NET Core sdk 3.1.202"
+    displayName: "Use .NET Core sdk from global.json"
     inputs:
-      version: 3.1.202
+      useGlobalJson: true
       
   - task: DotNetCoreCLI@2
     displayName: "dotnet build"
     inputs:
       projects: "**/*.csproj"
-      arguments: '--configuration $(BuildConfiguration)'
+      workingDirectory: ./
 
   - task: DotNetCoreCLI@2
     displayName: "dotnet test"
@@ -123,9 +123,9 @@ steps:
     condition: and(succeeded(), ne(variables['App.Version'], 'none'), eq(variables['System.PullRequest.IsFork'], 'False'))
 
   - task: DotNetCoreInstaller@0
-    displayName: 'Use .NET Core sdk 3.1.202'
+    displayName: 'Use .NET Core sdk from global.json'
     inputs:
-      version: 3.1.202
+      useGlobalJson: true
     enabled: true
 
   - task: DotNetCoreCLI@2
