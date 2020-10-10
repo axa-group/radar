@@ -22,8 +22,8 @@ WORKDIR "/src/src/RadarTechno/ClientApp"
 # Install Node.js
 COPY docker/apt /etc/apt
 RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
-RUN apt-get install -y build-essential nodejs npm
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y build-essential nodejs
 RUN node -v 
 RUN npm -v
 
