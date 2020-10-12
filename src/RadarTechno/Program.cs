@@ -13,24 +13,25 @@ namespace RadarTechno
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            })
-            .ConfigureAppConfiguration((context, config) =>
-            {
-                if (!context.HostingEnvironment.IsDevelopment())
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            return Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); })
+                .ConfigureAppConfiguration((context, config) =>
                 {
+                    var contextHostingEnvironment = context.HostingEnvironment;
+                    if (contextHostingEnvironment.IsDevelopment() ||
+                        contextHostingEnvironment.EnvironmentName == "Docker") return;
+
                     var builtConfig = config.Build();
-                    if(string.IsNullOrWhiteSpace(builtConfig["KeyVault:BaseUrl"])) {
+                    if (string.IsNullOrWhiteSpace(builtConfig["KeyVault:BaseUrl"]))
+                    {
                         var keyVaultConfigBuilder = new ConfigurationBuilder();
                         keyVaultConfigBuilder.AddAzureKeyVault(builtConfig["KeyVault:BaseUrl"]);
                         var keyVaultConfig = keyVaultConfigBuilder.Build();
                         config.AddConfiguration(keyVaultConfig);
                     }
-                }
-            });
+                });
+        }
     }
 }
