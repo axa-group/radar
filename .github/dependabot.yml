@@ -1,0 +1,127 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/src/RadarTechno/ClientApp"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.23
+    - 14.14.24
+    - 14.14.25
+    - 14.14.26
+    - 14.14.27
+    - 14.14.28
+    - 14.14.29
+    - 14.14.30
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+    - 14.14.37
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: "@storybook/react"
+    versions:
+    - 6.1.15
+    - 6.1.16
+    - 6.1.17
+    - 6.1.18
+    - 6.1.19
+    - 6.1.20
+    - 6.1.21
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+    - 6.2.6
+    - 6.2.7
+    - 6.2.8
+  - dependency-name: "@storybook/addon-knobs"
+    versions:
+    - 6.1.15
+    - 6.1.16
+    - 6.1.17
+    - 6.1.18
+    - 6.1.19
+    - 6.1.20
+    - 6.1.21
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+    - 6.2.6
+    - 6.2.7
+    - 6.2.8
+  - dependency-name: "@storybook/addon-links"
+    versions:
+    - 6.1.15
+    - 6.1.16
+    - 6.1.17
+    - 6.1.18
+    - 6.1.19
+    - 6.1.20
+    - 6.1.21
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+    - 6.2.6
+    - 6.2.7
+    - 6.2.8
+  - dependency-name: "@storybook/addons"
+    versions:
+    - 6.1.15
+    - 6.1.16
+    - 6.1.17
+    - 6.1.18
+    - 6.1.19
+    - 6.1.20
+    - 6.1.21
+    - 6.2.0
+    - 6.2.1
+    - 6.2.2
+    - 6.2.3
+    - 6.2.4
+    - 6.2.5
+    - 6.2.6
+    - 6.2.7
+    - 6.2.8
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: typescript
+    versions:
+    - 4.1.3
+    - 4.1.4
+    - 4.1.5
+    - 4.2.2
+    - 4.2.3
+  - dependency-name: "@storybook/addon-storyshots"
+    versions:
+    - 6.1.15
+    - 6.1.16
+    - 6.1.17
+    - 6.1.18
+    - 6.1.19
+    - 6.1.20
+    - 6.1.21
+- package-ecosystem: nuget
+  directory: "/src"
+  schedule:
+    interval: weekly
+    time: "04:00"
+  open-pull-requests-limit: 10
