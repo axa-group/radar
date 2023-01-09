@@ -5,7 +5,7 @@
   "dependencies": {
     "@axa-fr/react-toolkit-all": "^1.3.16",
     "@types/react-dom": "16.9.0",
-    "luxon": "^1.22.0",
+    "luxon": "^1.28.1",
     "monaco-editor": "^0.20.0",
     "monaco-editor-webpack-plugin": "^1.9.0",
     "mw.validation": "^1.0.15",
